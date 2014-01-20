@@ -663,449 +663,82 @@ a:hover {
     transition: border-color 0.1s; }
 
 #header {
+  height: 500px;
+  overflow: hidden;
   padding: 5em 0 6em;
   background-color: #900;
   text-align: center; }
+  #header .ios-icon {
+    display: block;
+    width: 60px;
+    height: 30px;
+    background: yellow;
+    margin: 0 auto; }
   #header h1 {
     font-size: 3.5em;
     font-weight: bold;
-    color: white; }
+    color: white;
+    margin-top: .2em; }
   #header h2 {
     line-height: 1.3;
     font-size: 1.4em;
     width: 60%;
     color: #ff8282;
-    margin: .3em auto 2em; }
-  #header li {
-    width: 25%;
-    float: left; }
-    #header li img {
-      width: 100%; }
+    margin: .3em auto .7em; }
+  #header .device-image {
+    margin-top: 3em;
+    width: 900px;
+    height: auto;
+    position: relative; }
 
 #download-link {
-  position: absolute;
-  top: 50px;
-  right: 10px; }
+  width: 140px;
+  display: block;
+  margin: 0 auto; }
   #download-link img {
-    width: 140px; }
+    width: 100%; }
+
+#article-icons {
+  position: relative; }
+  #article-icons li {
+    width: 20px;
+    height: 50px;
+    background: yellow;
+    position: absolute;
+    left: 50%;
+    margin-left: -10px; }
 
 #recommendations,
 #reading-list,
-#article {
-  background: #e8e8e8;
+#share {
   text-align: center;
-  padding: 6em 0;
-  position: relative;
-  overflow: hidden; }
-  #recommendations h2,
-  #reading-list h2,
-  #article h2 {
-    font-size: 3.4em;
-    font-weight: bold; }
+  font-size: 2.6em;
+  padding: 6em 0; }
   #recommendations p,
   #reading-list p,
-  #article p {
-    font-size: 1.3em;
-    line-height: 1.3;
-    font-weight: normal;
-    width: 60%;
-    margin: .5em auto 2em;
-    color: #777; }
-  #recommendations .device-image,
-  #reading-list .device-image,
-  #article .device-image {
-    width: 340px;
-    margin: 0 auto;
-    position: relative; }
-    #recommendations .device-image.ipad,
-    #reading-list .device-image.ipad,
-    #article .device-image.ipad {
-      width: 100%;
-      height: auto;
-      margin: 0; }
-  #recommendations .user-avatar,
-  #reading-list .user-avatar,
-  #article .user-avatar {
-    position: absolute;
-    left: 50%;
-    width: 90px;
-    height: 90px;
-    z-index: 0;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -ms-border-radius: 50%; }
-  #recommendations:after,
-  #reading-list:after,
-  #article:after {
-    content: "";
-    clear: both;
-    display: block; }
-
-#typography,
-#offline,
-#options {
-  line-height: 1.3;
-  width: 100%;
-  color: #777; }
-  #typography .line,
-  #offline .line,
-  #options .line {
-    position: absolute;
-    top: 49%;
-    height: 1px;
-    background: #e8e8e8; }
-
-#typography,
-#offline {
-  text-align: right; }
-  #typography .line,
-  #offline .line {
-    left: 100%;
-    width: 40px;
-    margin-left: 10px; }
-
-#typography {
-  top: 485px; }
-
-#options {
-  top: 370px;
-  text-align: left; }
-  #options .line {
-    left: 0;
-    margin-left: -50px;
-    width: 40px; }
-
-#offline {
-  top: 125px; }
-
-#user-avatar-01 {
-  margin-left: -400px;
-  top: 120px;
-  animation: hover 5s infinite ease-in-out;
-  -webkit-animation: hover 5s infinite ease-in-out;
-  -moz-animation: hover 5s infinite ease-in-out;
-  -ms-animation: hover 5s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-02 {
-  margin-left: -250px;
-  top: 980px;
-  animation: hover 6s infinite ease-in-out;
-  -webkit-animation: hover 6s infinite ease-in-out;
-  -moz-animation: hover 6s infinite ease-in-out;
-  -ms-animation: hover 6s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-03 {
-  margin-left: -270px;
-  top: 220px;
-  animation: hover 7s infinite ease-in-out;
-  -webkit-animation: hover 7s infinite ease-in-out;
-  -moz-animation: hover 7s infinite ease-in-out;
-  -ms-animation: hover 7s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-04 {
-  margin-left: -310px;
-  top: 400px;
-  animation: hover 5.5s infinite ease-in-out;
-  -webkit-animation: hover 5.5s infinite ease-in-out;
-  -moz-animation: hover 5.5s infinite ease-in-out;
-  -ms-animation: hover 5.5s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-04 {
-  margin-left: -550px;
-  top: 290px;
-  animation: hover 6.3s infinite ease-in-out;
-  -webkit-animation: hover 6.3s infinite ease-in-out;
-  -moz-animation: hover 6.3s infinite ease-in-out;
-  -ms-animation: hover 6.3s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-05 {
-  margin-left: -310px;
-  top: 620px;
-  animation: hover 4.8s infinite ease-in-out;
-  -webkit-animation: hover 4.8s infinite ease-in-out;
-  -moz-animation: hover 4.8s infinite ease-in-out;
-  -ms-animation: hover 4.8s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-06 {
-  margin-left: -390px;
-  top: 440px;
-  animation: hover 6.7s infinite ease-in-out;
-  -webkit-animation: hover 6.7s infinite ease-in-out;
-  -moz-animation: hover 6.7s infinite ease-in-out;
-  -ms-animation: hover 6.7s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-07 {
-  margin-left: -480px;
-  top: 840px;
-  animation: hover 5.6s infinite ease-in-out;
-  -webkit-animation: hover 5.6s infinite ease-in-out;
-  -moz-animation: hover 5.6s infinite ease-in-out;
-  -ms-animation: hover 5.6s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-08 {
-  margin-left: 290px;
-  top: 170px;
-  animation: hover 8.1s infinite ease-in-out;
-  -webkit-animation: hover 8.1s infinite ease-in-out;
-  -moz-animation: hover 8.1s infinite ease-in-out;
-  -ms-animation: hover 8.1s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-09 {
-  margin-left: 380px;
-  top: 70px;
-  animation: hover 7.7s infinite ease-in-out;
-  -webkit-animation: hover 7.7s infinite ease-in-out;
-  -moz-animation: hover 7.7s infinite ease-in-out;
-  -ms-animation: hover 7.7s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-10 {
-  margin-left: 180px;
-  top: 520px;
-  animation: hover 4.4s infinite ease-in-out;
-  -webkit-animation: hover 4.4s infinite ease-in-out;
-  -moz-animation: hover 4.4s infinite ease-in-out;
-  -ms-animation: hover 4.4s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-11 {
-  margin-left: 320px;
-  top: 320px;
-  animation: hover 5.6s infinite ease-in-out;
-  -webkit-animation: hover 5.6s infinite ease-in-out;
-  -moz-animation: hover 5.6s infinite ease-in-out;
-  -ms-animation: hover 5.6s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-12 {
-  margin-left: 450px;
-  top: 530px;
-  animation: hover 3.9s infinite ease-in-out;
-  -webkit-animation: hover 3.9s infinite ease-in-out;
-  -moz-animation: hover 3.9s infinite ease-in-out;
-  -ms-animation: hover 3.9s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-13 {
-  margin-left: 230px;
-  top: 820px;
-  animation: hover 5.4s infinite ease-in-out;
-  -webkit-animation: hover 5.4s infinite ease-in-out;
-  -moz-animation: hover 5.4s infinite ease-in-out;
-  -ms-animation: hover 5.4s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#user-avatar-14 {
-  margin-left: 390px;
-  top: 750px;
-  animation: hover 9s infinite ease-in-out;
-  -webkit-animation: hover 9s infinite ease-in-out;
-  -moz-animation: hover 9s infinite ease-in-out;
-  -ms-animation: hover 9s infinite ease-in-out;
-  animation-delay: 0;
-  -webkit-animation-delay: 0;
-  -ms-animation-delay: 0;
-  -moz-animation-delay: 0; }
-
-#pipe {
-  margin: 5em auto;
-  background: #d1d1d1;
-  width: 100%;
-  height: 1px; }
-
-#share {
-  background-color: #900;
-  overflow: hidden;
-  position: relative;
-  height: 320px; }
-  #share .device-image {
-    position: absolute;
-    width: 300px;
-    margin-left: -150px;
-    left: 50%;
-    top: 40px; }
   #share p {
-    width: 30%;
-    color: white;
-    font-size: 2em;
-    line-height: 1.2;
-    text-align: left; }
-  #share .left {
-    float: left;
-    margin: 100px 0 0 40px; }
-  #share .right {
-    width: 28%;
-    float: right;
-    margin: 100px 40px 0 0; }
+    width: 60%;
+    margin: 1em auto;
+    line-height: 1.4; }
 
-#reading-list {
-  background: #fff; }
-  #reading-list ul {
-    position: absolute;
-    top: 200px;
-    left: 50%;
-    width: 200px; }
-  #reading-list li {
-    position: absolute;
-    left: 0; }
-  #reading-list .left {
-    margin-left: -440px; }
-  #reading-list .right {
-    margin-left: 240px; }
+.section-icon {
+  width: 150px;
+  height: 150px;
+  background: yellow;
+  margin: 0 auto;
+  display: block; }
 
-#article .device-image {
+.product-screen {
   position: relative;
-  height: auto;
-  width: 80%; }
-
-#styling-wrapper {
-  width: 100%;
-  height: 700px;
-  overflow: hidden; }
-
-#settings {
-  border: 1px solid #dbdbdb;
-  width: 100%;
-  background-color: #e1e1e1;
-  margin: 0 auto 5em;
-  overflow: hidden; }
-  #settings ul li {
-    display: inline-block; }
-
-#fonts,
-#mode,
-#sizing {
-  float: left;
-  width: 25%; }
-
-#mode {
-  padding: 1.5em 0em; }
-
-#fonts {
-  width: 50%;
-  font-weight: bold;
-  font-size: 2em;
-  padding: .3em 0em; }
-  #fonts span {
-    display: block;
-    font-weight: normal;
-    font-size: .4em; }
-
-#slider {
-  width: 80%;
-  height: 2px;
-  margin-top: 34px;
-  position: relative;
-  background: #c1c1c1; }
-  #slider span {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -ms-border-radius: 50%;
-    top: -15px;
-    left: 50%;
-    margin-left: -15px; }
-
-#design {
-  background: #252525;
+  background: #d8d8d8;
   overflow: hidden;
   position: relative;
   height: 900px; }
-  #design .device-image {
+  .product-screen .device-image {
     position: absolute;
     top: -240px;
     right: 0;
     margin-right: -200px; }
-
-#features-rundown {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  width: 80px;
-  text-align: center;
-  font-family: 'Whitney A', 'Whitney B', Arial Narrow, sans-serif; }
-  #features-rundown li {
-    display: inline-block;
-    color: #777;
-    border: 1px solid #777;
-    padding: .3em .3em .4em;
-    font-size: 4em;
-    width: 120px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    font-family: 'readabilicons';
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -ms-border-radius: 3px; }
-    #features-rundown li span {
-      font-family: 'Whitney A', 'Whitney B', Arial Narrow, sans-serif;
-      display: block;
-      margin-top: .5em;
-      text-transform: uppercase;
-      font-size: .2em; }
-
-#footer {
-  padding: 2em 0; }
 
 @media screen and (min-width: 380px) {
   #featured-lab-project .featured-lab-project-image img {
