@@ -359,7 +359,7 @@ body.touch {
 
     &.article-3 {
       margin-left: -15px;
-      margin-top: -30px;
+      margin-top: -10px;
     }
 
     &.article-4 {
@@ -383,6 +383,10 @@ body.touch {
   height: 550px;
   overflow: hidden;
 
+  .app-store-info {
+    width: 135px;
+  }
+
   img {
     position: absolute;
     left: 50%;
@@ -392,20 +396,23 @@ body.touch {
     padding: 1.5em 0 .3em;
     color: #353535;
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2em;
 
     span {
       font-weight: bold;
       color: #a6001b;
-      @include sentinel-font;
     }
+  }
+
+  p {
+    display: none;
   }
 }
 
 #hero1 {
-  margin-left: -150px;
+  margin-left: -140px;
   top: 165px;
-  width: 300px;
+  width: 280px;
   z-index: 10;
 }
 
@@ -416,13 +423,12 @@ body.touch {
   z-index: 9;
   display: none;
 }
-
 .download-link {
   float: left;
   font-size: 0;
   text-indent: -9999px;
-  width: 100px;
-  height: 27px;
+  width: 135px;
+  height: 40px;
   background: transparent url(../images/appstorebadge.svg) center center no-repeat;
   background-size: 100% auto;
   display: inline-block;
@@ -473,6 +479,26 @@ footer {
   #editorschoice-feature {
     width: 60%;
     margin-left: -30%;
+  }
+
+  #product-heros {
+    height: 600px;
+
+    h1 {
+      font-size: 3em;
+    }
+    .app-store-info {
+      width: 416px;
+    }
+
+    p {
+      font-size: 1.4em;
+      display: inline-block;
+    }
+  }
+
+  #hero1 {
+    top: 200px;
   }
 }
 
@@ -544,7 +570,7 @@ footer {
     width: 70%;
     margin-left: -35%;
     font-size: 3em;
-    margin-top: -270px;
+    margin-top: -220px;
     padding: 3em 0;
   }
 
@@ -566,35 +592,35 @@ footer {
   }
 
   #product-heros {
-    height: 970px;
+    height: 780px;
 
     h1 {
-      padding: 1.5em 0 .2em;
+      padding: 1em 0 .2em;
       font-size: 5em;
     }
-  }
 
-  .app-store-info {
-    width: 530px;
-    margin: 0 auto;
+    .app-store-info {
+      width: 425px;
+      margin: 0 auto;
 
-    p {
-      padding: .4em 0 .4em .9em;
-      font-size: 1.4em;
-      margin-left: 1em;
+      p {
+        padding: .4em 0 .4em .9em;
+        font-size: 1.4em;
+        margin-left: 1em;
+      }
     }
   }
 
   #hero1 {
-    margin-left: 230px;
-    top: 357px;
-    width: 240px;
+    margin-left: 180px;
+    top: 286px;
+    width: 186px;
   }
 
   #hero2 {
-    margin-left: -470px;
-    top: 304px;
-    width: 820px;
+    margin-left: -360px;
+    top: 254px;
+    width: 620px;
     display: block;
   }
 
@@ -768,8 +794,44 @@ footer {
 
 
 @media screen and (min-width: 1002px) {
+  #intro {
+    h1 {
+      font-size: 9em;
+      margin-bottom: .1em;
+    }
+  }
+
+  #product-heros {
+    height: 960px;
+
+    h1 {
+      padding: 1.2em 0 .1em;
+      font-size: 6em;
+    }
+  }
+
+  #hero1 {
+    margin-left: 230px;
+    top: 357px;
+    width: 240px;
+  }
+
+  #hero2 {
+    margin-left: -470px;
+    top: 304px;
+    width: 820px;
+  }
 
   #editorschoice-feature {
-    font-size: 4em;
+    margin-top: -300px;
+    font-size: 4.6em;
+  }
+}
+
+
+@media screen and (min-width: 1202px) {
+  #editorschoice-feature {
+    margin-top: -330px;
+    font-size: 5em;
   }
 }

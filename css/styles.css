@@ -330,7 +330,7 @@ body.touch #container {
   margin-top: 10px; }
 #save-article-icons li.article-3 {
   margin-left: -15px;
-  margin-top: -30px; }
+  margin-top: -10px; }
 #save-article-icons li.article-4 {
   margin-left: 75px;
   margin-top: 10px; }
@@ -346,6 +346,8 @@ body.touch #container {
   z-index: 10;
   height: 550px;
   overflow: hidden; }
+  #product-heros .app-store-info {
+    width: 135px; }
   #product-heros img {
     position: absolute;
     left: 50%; }
@@ -353,16 +355,17 @@ body.touch #container {
     padding: 1.5em 0 .3em;
     color: #353535;
     text-align: center;
-    font-size: 2.2em; }
+    font-size: 2em; }
     #product-heros h1 span {
       font-weight: bold;
-      color: #a6001b;
-      font-family: 'Sentinel A', 'Sentinel B', 'Georgia', serif; }
+      color: #a6001b; }
+  #product-heros p {
+    display: none; }
 
 #hero1 {
-  margin-left: -150px;
+  margin-left: -140px;
   top: 165px;
-  width: 300px;
+  width: 280px;
   z-index: 10; }
 
 #hero2 {
@@ -376,8 +379,8 @@ body.touch #container {
   float: left;
   font-size: 0;
   text-indent: -9999px;
-  width: 100px;
-  height: 27px;
+  width: 135px;
+  height: 40px;
   background: transparent url(../images/appstorebadge.svg) center center no-repeat;
   background-size: 100% auto;
   display: inline-block; }
@@ -415,7 +418,20 @@ footer {
 
   #editorschoice-feature {
     width: 60%;
-    margin-left: -30%; } }
+    margin-left: -30%; }
+
+  #product-heros {
+    height: 600px; }
+    #product-heros h1 {
+      font-size: 3em; }
+    #product-heros .app-store-info {
+      width: 416px; }
+    #product-heros p {
+      font-size: 1.4em;
+      display: inline-block; }
+
+  #hero1 {
+    top: 200px; } }
 @media screen and (min-width: 748px) {
   #intro {
     padding: 11em 0 9em; }
@@ -469,7 +485,7 @@ footer {
     width: 70%;
     margin-left: -35%;
     font-size: 3em;
-    margin-top: -270px;
+    margin-top: -220px;
     padding: 3em 0; }
 
   .section-icon {
@@ -483,28 +499,27 @@ footer {
     margin-left: -.8em; }
 
   #product-heros {
-    height: 970px; }
+    height: 780px; }
     #product-heros h1 {
-      padding: 1.5em 0 .2em;
+      padding: 1em 0 .2em;
       font-size: 5em; }
-
-  .app-store-info {
-    width: 530px;
-    margin: 0 auto; }
-    .app-store-info p {
-      padding: .4em 0 .4em .9em;
-      font-size: 1.4em;
-      margin-left: 1em; }
+    #product-heros .app-store-info {
+      width: 425px;
+      margin: 0 auto; }
+      #product-heros .app-store-info p {
+        padding: .4em 0 .4em .9em;
+        font-size: 1.4em;
+        margin-left: 1em; }
 
   #hero1 {
-    margin-left: 230px;
-    top: 357px;
-    width: 240px; }
+    margin-left: 180px;
+    top: 286px;
+    width: 186px; }
 
   #hero2 {
-    margin-left: -470px;
-    top: 304px;
-    width: 820px;
+    margin-left: -360px;
+    top: 254px;
+    width: 620px;
     display: block; }
 
   .download-link {
@@ -606,5 +621,30 @@ footer {
     margin-left: 160px;
     margin-top: 100px; } }
 @media screen and (min-width: 1002px) {
+  #intro h1 {
+    font-size: 9em;
+    margin-bottom: .1em; }
+
+  #product-heros {
+    height: 960px; }
+    #product-heros h1 {
+      padding: 1.2em 0 .1em;
+      font-size: 6em; }
+
+  #hero1 {
+    margin-left: 230px;
+    top: 357px;
+    width: 240px; }
+
+  #hero2 {
+    margin-left: -470px;
+    top: 304px;
+    width: 820px; }
+
   #editorschoice-feature {
-    font-size: 4em; } }
+    margin-top: -300px;
+    font-size: 4.6em; } }
+@media screen and (min-width: 1202px) {
+  #editorschoice-feature {
+    margin-top: -330px;
+    font-size: 5em; } }
