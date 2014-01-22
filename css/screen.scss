@@ -18,7 +18,7 @@ body {
 
 a:link,
 a:visited {
-  color: $linkblue;
+  color: #a6001b;
   text-decoration: none;
   @include transition(color, 150ms, ease-in-out);
 }
@@ -31,21 +31,10 @@ a:hover {
   width: 100%;
 }
 
-#main-nav {
-  background-color: #a6001b;
-  padding: 0.4em 0.2em 0.6em 0.8em;
-  position: relative;
-  font-weight: normal;
-
-  .readability-couch {
-    background-color: #900;
-    color: #fdfdfd;
-    font-size: 1.4em;
-    line-height: 0.9;
-    padding-right: 0.2em;
-    position: relative;
-    z-index: 2;
-    @include readabilicons;
+nav {
+  .couch-icon {
+    color: white;
+    font-size: 2em;
   }
 }
 
@@ -73,18 +62,22 @@ a:hover {
   }
 }
 
+.couch-icon {
+  display: block;
+  @include readabilicons;
+}
+
 #intro {
   position: absolute;
   left: 0;
+  z-index: 9;
   width: 100%;
-  margin-top: -250px;
+  margin-top: -240px;
 
   .couch-icon {
-    display: block;
     font-size: 6em;
     margin: 0em auto -.1em;
     color: white;
-    @include readabilicons;
   }
 
   overflow: hidden;
@@ -94,23 +87,36 @@ a:hover {
     font-size: 8em;
     font-weight: bold;
     color: white;
+    margin-bottom: .1em;
 
     span {
       font-weight: normal;
-      font-size: .5em;
+      font-size: .3em;
       display: block;
+      color: #e94c53;
+      width: 260px;
+      padding: .2em 0;
+      margin: .5em auto 0;
+      border: 1px solid #e94c53;
+      @include border-radius(.2em);
     }
   }
 
-  p {
+  h2 {
     line-height: 1.3;
-    font-size: 1.6em;
+    font-size: 2em;
     width: 60%;
     color: #fff;
-    margin: 5em auto .7em;
+    margin: 0 auto;
+  }
 
-    span {
-      display: block;
+  .app-store-info {
+    margin: 8em auto 0;
+    width: 380px;
+    p {
+      color: #fff;
+      border-color: #e94c53;
+      @include sentinel-font;
     }
   }
 
@@ -120,6 +126,18 @@ a:hover {
     height: auto;
     position: relative;
   }
+}
+
+#scroll-instructions {
+  float: left;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 1.4em;
+  color: #e94c53;
+  margin: .6em auto;
+  border: none;
+  @include sentinel-font;
 }
 
 #download-link {
@@ -144,6 +162,11 @@ a:hover {
     color: #ff565a;
     font-size: 2.7em;
     @include readabilicons;
+    @include transition(opacity, 400ms, ease-in-out);
+
+    &.hidden {
+      opacity: 0;
+    }
   }
 
   position: relative;
@@ -155,13 +178,15 @@ a:hover {
 
 #follow-feature,
 #recommend-feature,
-#save-feature {
+#save-feature,
+#editorschoice-feature {
   position: fixed;
-  width: 26%;
+  z-index: 1;
+  width: 40%;
   top: 50%;
   opacity: 0;
   left: 50%;
-  margin-left: -13%;
+  margin-left: -20%;
   margin-top: -205px;
   display: block;
   text-align: center;
@@ -179,8 +204,23 @@ a:hover {
   p {
     width: 100%;
     margin: 0 auto;
-    font-size: .6em;
+    font-size: .7em;
     line-height: 1.4;
+  }
+}
+
+#editorschoice-feature {
+  width: 60%;
+  margin-left: -30%;
+  font-size: 4em;
+  margin-top: -270px;
+  background: transparent url(../images/badge.svg) center center no-repeat;
+  background-size: 100% auto;
+  padding: 3em 0;
+
+  p {
+    color: #e94c53;
+    @include whitney-font;
   }
 }
 
@@ -188,7 +228,7 @@ a:hover {
   margin: 0 auto .2em;
   font-size: 6em;
   display: block;
-   @include readabilicons;
+  @include readabilicons;
 }
 
 #follow-feature {
@@ -197,109 +237,111 @@ a:hover {
   }
 }
 
-#hero {
-  background: #202020;
+#recommend-feature {
+  .section-icon {
+    margin-left: -.5em;
+  }
+}
+
+#product-heros {
+  background: #fdfdfd;
+  position: relative;
+  z-index: 10;
+  height: 970px;
 
   img {
-    margin-top: -300px;
-    width: 120%;
+    position: absolute;
+    left: 50%;
   }
-}
 
-.product-screen {
-  position: relative;
-  background: #d8d8d8;
-  overflow: hidden;
-  position: relative;
-  height: 900px;
+  h1 {
+    padding: 1.5em 0 .2em;
+    color: #353535;
+    text-align: center;
+    font-size: 5em;
 
-&.short {
-    height: 700px;
-}
-  .hero1 {
-    margin-top: 80px;
-    margin-left: 15%;
-    width: 40%;
-  }
-  .hero2 {
-        margin-top: 60px;
-    margin-left: 45%;
-
-      width: 40%;
-}
-
-  img {
-    height: auto;
-  }
-}
-
-#settings {
-  width: 100%;
-  background-color: rgba(30,30,30,0.9);
-  margin: 0 auto 0;
-  overflow: hidden;
-  position: absolute;
-  bottom: 0;
-  color: white;
-  left: 0;
-
-
-  ul {
-    li {
-      display: inline-block;
+    span {
+      font-weight: bold;
+      color: #a6001b;
+      @include sentinel-font;
     }
   }
 }
 
-#fonts,
-#mode,
-#sizing {
+.app-store-info {
+  width: 330px;
+  margin: 0 auto;
+  @include whitney-font;
+
+  a {
+    color: white;
+    display: inline-block;
+
+    &:hover {
+      color: #f5b4be;
+    }
+  }
+
+  p {
     float: left;
-    width: 25%;
-}
-
-#mode {
-    padding: 1.5em 0em;
-    text-align: center;
-}
-
-#fonts {
-  width: 50%;
-  font-weight: bold;
-  font-size: 2em;
-  padding: .3em 0em;
-    text-align: center;
-
-
-  span {
-    display: block;
-    font-weight: normal;
-    font-size: .4em;
+    padding: .4em 0 .4em .9em;
+    border-left :1px solid #e1e1e1;
+    color: #999;
+    font-size: 1.4em;
+    display: inline-block;
+    margin-left: 1em;
   }
 }
 
-#slider {
-  width: 80%;
-  height: 2px;
-  margin-top: 34px;
-  position: relative;
-  background: #c1c1c1;
+#hero1 {
+  margin-left: 230px;
+  top: 357px;
+  width: 240px;
+  z-index: 10;
+}
 
-  span {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    background: white;
-    @include border-radius(50%);
-    top: -15px;
-    left: 50%;
-    margin-left: -15px;
+#hero2 {
+  margin-left: -470px;
+  top: 304px;
+  width: 820px;
+  z-index: 9;
+}
+
+.download-link {
+  float: left;
+  font-size: 0;
+  text-indent: -9999px;
+  width: 135px;
+  height: 40px;
+  background: transparent url(../images/appstorebadge.svg) center center no-repeat;
+  background-size: 100% auto;
+  display: inline-block;
+}
+
+footer {
+  background: #fdfdfd;
+
+  ul {
+    border-top: 1px solid #e8e8e8;
+    margin: 0 auto;
+    width: 90%;
+    padding: 2em 0;
+  }
+
+  li {
+    display: inline-block;
+    margin-left: 0.6em;
+
+    &:first-child {
+      color: #353535;
+      @include readabilicons;
+    }
   }
 }
 
-#awards {
-  background: #c8c8c8;
-  height: 200px;
+.feedback-link {
+  float: right;
+  margin-right: 0.3em;
 }
 
 @media screen and (min-width: 380px) {
