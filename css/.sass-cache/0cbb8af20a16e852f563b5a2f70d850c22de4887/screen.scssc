@@ -1,5 +1,5 @@
 3.2.10 (Media Mark)
-aea030864bb4c9c1d37ad90d2e13fe65ffa173d0
+d35eef82e652dbad83462b6001e24fc41261939a
 o:Sass::Tree::RootNode
 :@template"£.@import "reset";
 @import "mixins";
@@ -825,7 +825,7 @@ footer {
 
   #editorschoice-feature {
     margin-top: -300px;
-    font-size: 4.6em;
+    font-size: 4.4em;
   }
 }
 
@@ -3059,7 +3059,7 @@ hero2;+@;i1;5To;;i ;[o;;i ;["margin-top;[ ;o;; ;!;"-300px
 ;
 @
 ;i8;";#o;;i ;["font-size;[ ;o;; ;!;"
-4.6em;
+4.4em;
 @
 ;
 @
