@@ -555,8 +555,7 @@ footer {
     border-bottom: 1px solid #d22c2c; }
   body.touch #editorschoice-feature {
     border-top: none;
-    margin: 0 auto;
-    padding: 7em 0; }
+    margin: 0 auto; }
   body.touch .article-list {
     display: block; }
   body.touch #product-heros {
@@ -564,7 +563,6 @@ footer {
     background: #fdfdfd;
     position: relative;
     z-index: 10;
-    height: 950px;
     overflow: hidden; }
   body.touch #container {
     float: left;
