@@ -4,7 +4,7 @@ $(function () {
   var isMobile = /iphone|ipod|android|blackberry|opera mini|opera mobi|skyfire|maemo|windows phone|palm|iemobile|symbian|symbianos|fennec/i.test(navigator.userAgent.toLowerCase()),
       isTablet = /ipad|android 3|sch-i800|playbook|tablet|kindle|gt-p1000|sgh-t849|shw-m180s|a510|a511|a100|dell streak|silk/i.test(navigator.userAgent.toLowerCase()),
       $window = $(window),
-      $body = $('body'),
+      $body = $('html, body'),
       windowWidth = $window.width(),
       windowHeight = $window.height(),
       onResize,
@@ -15,8 +15,10 @@ $(function () {
       BREAK1 = 800,
       BREAK2 = 1600,
       BREAK3 = 2400,
-      NEXT_DELAY = 1000,
-      oldScrollTop = 0,
+      NEXT_DELAY = 1400,
+      iconOffset = 0,
+      currentIndex = 0,
+      $intro = $("#intro"),
       $follow = $("#follow-feature"),
       $recommend = $("#recommend-feature"),
       $save = $("#save-feature"),
@@ -26,14 +28,6 @@ $(function () {
       $article3 = $("#article-3"),
       $article4 = $("#article-4"),
       $article5 = $("#article-5");
-
-  // Modernizer?
-  if (isMobile || isTablet) {
-    $body.addClass('touch');
-  }
-
-  $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3));
-  $("#intro").css('top', windowHeight / 2);
 
   resetFeatures = function () {
       $("#article-icons > li").removeClass('hidden');
@@ -45,16 +39,15 @@ $(function () {
       $save.removeClass();
   };
 
-  onScroll = function () {
-    var scrollTop = $window.scrollTop(),
-      scrollingUp = scrollTop > oldScrollTop,
+  onScroll = function (scrollTop) {
+    if ($body.hasClass('touch')) {
+      return;
+    }
+
+    var scrollTop = scrollTop ? scrollTop.target ? $window.scrollTop() : scrollTop : $window.scrollTop(),
       windowWidthHalf = (windowWidth / 2),
       windowHeightHalf = (windowHeight / 2),
       start = -50;
-
-      console.log(windowWidthHalf, windowHeightHalf);
-
-    oldScrollTop = scrollTop;
 
     if (scrollTop < windowHeight + NEXT_DELAY) {
        resetFeatures();
@@ -178,8 +171,8 @@ $(function () {
       scrollTop = scrollTop - windowHeight * 3 - (NEXT_DELAY * 3);
 
       if (scrollTop > windowHeight) {
-          $choice.addClass('visible');
-         scrollTop = windowHeight - 1;
+        $choice.addClass('visible');
+        scrollTop = windowHeight - 1;
       }
 
       $article1.css({
@@ -213,10 +206,15 @@ $(function () {
   onResize = function () {
     windowWidth = $window.width();
     windowHeight = $window.height();
-    $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3));
-    $("#intro").css('top', windowHeight / 2);
 
     onScroll();
+
+    if ($body.hasClass('touch')) {
+      return;
+    }
+
+    $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3));
+    $("#intro").css('top', windowHeight / 2);
   };
 
   onCoordChange = function (yCoord, start, end) {
@@ -230,4 +228,14 @@ $(function () {
 
   $window.scroll(_.throttle(onScroll, THROTTLE));
   $window.resize(_.throttle(onResize, THROTTLE));
+
+    // Modernizer?
+  if (isMobile || isTablet) {
+    $body.addClass('touch');
+
+    return;
+  }
+
+  // $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3) + $('#product-heros').outerHeight());
+  // $intro.css('top', windowHeight / 2);
 });

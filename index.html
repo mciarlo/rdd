@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1.0, user-scalable=yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent" />
 
   <title>Readability for iOS</title>
   <meta name="Description" content="" />
@@ -17,7 +17,16 @@
     <script src="js/lib/html5shiv.js"></script>
   <![endif]-->
 </head>
-<body>
+
+<body id="body" class="touch">
+  <ul id="article-icons" class="article-list">
+    <li id="article-1"></li>
+    <li id="article-2"></li>
+    <li id="article-3"></li>
+    <li id="article-4"></li>
+    <li id="article-5"></li>
+  </ul>
+
   <div id="container">
     <div id="intro">
       <span class="couch-icon"></span>
@@ -31,25 +40,40 @@
       </div>
     </div>
 
-    <ul id="article-icons">
-      <li id="article-1"></li>
-      <li id="article-2"></li>
-      <li id="article-3"></li>
-      <li id="article-4"></li>
-      <li id="article-5"></li>
-    </ul>
-
     <div id="follow-feature">
+      <ul id="follow-article-icons" class="article-list">
+        <li class="article-1"></li>
+        <li class="article-2"></li>
+        <li class="article-3"></li>
+        <li class="article-4"></li>
+        <li class="article-5"></li>
+      </ul>
+
       <span class="section-icon"></span>
       <p>Follow folks on Readability to see what articles they recommend.</p>
     </div>
 
     <div id="recommend-feature">
+      <ul id="recommend-article-icons" class="article-list">
+        <li class="article-1"></li>
+        <li class="article-2"></li>
+        <li class="article-3"></li>
+        <li class="article-4"></li>
+        <li class="article-5"></li>
+      </ul>
       <span class="section-icon"></span>
       <p>Share your own Recommendations with the Readability community.</p>
     </div>
 
     <div id="save-feature">
+      <ul id="save-article-icons" class="article-list">
+        <li class="article-1"></li>
+        <li class="article-2"></li>
+        <li class="article-3"></li>
+        <li class="article-4"></li>
+        <li class="article-5"></li>
+      </ul>
+
       <span class="section-icon"></span>
       <p>Save articles to your Reading List to enjoy them anytime, anywhere.</p>
     </div>
@@ -60,16 +84,16 @@
     </div>
   </div>
 
-  <section id="product-heros">
-    <h1><span>Readability</span> for iOS</h1>
-    <div class="app-store-info">
-      <a class="download-link" href="#" title="Download Readability on the App Store">View Readability in the App Store</a>
-      <p>Need an account? <a href="#">Sign Up</a></p>
-    </div>
+      <section id="product-heros">
+      <h1><span>Readability</span> for iOS</h1>
+      <div class="app-store-info">
+        <a class="download-link" href="#" title="Download Readability on the App Store">View Readability in the App Store</a>
+        <p>Need an account? <a href="#">Sign Up</a></p>
+      </div>
 
-    <img id="hero1" src="images/readingList.png" alt="iPhone Reading List" />
-    <img id="hero2" src="images/recos_list.png" alt="iPad Article" />
-  </section>
+      <img id="hero1" src="images/readingList.png" alt="iPhone Reading List" />
+      <img id="hero2" src="images/recos_list.png" alt="iPad Article" />
+    </section>
 
   <footer role="contentinfo">
     <ul>
@@ -83,6 +107,7 @@
 </footer>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/lib/hammer.js"></script>
 <script src="js/lib/underscore.js"></script>
 <script src="js/rdd.js"></script>
 </body>
