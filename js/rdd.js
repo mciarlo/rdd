@@ -214,7 +214,6 @@ $(function () {
     }
 
     $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3));
-    $("#intro").css('top', windowHeight / 2);
   };
 
   onCoordChange = function (yCoord, start, end) {
@@ -236,6 +235,5 @@ $(function () {
     return;
   }
 
-  // $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3) + $('#product-heros').outerHeight());
-  // $intro.css('top', windowHeight / 2);
+  $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3) + $('#product-heros').outerHeight());
 });

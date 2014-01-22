@@ -32,8 +32,12 @@ body.touch {
     left: auto;
     top: auto;
     margin: 0;
-    padding: 8em 0;
+
+    .app-store-info {
+      margin-top: 3em;
+    }
   }
+
 
   #follow-feature,
   #recommend-feature,
@@ -46,16 +50,10 @@ body.touch {
     margin: 0 auto;
     left: auto;
     top: auto;
-    width: 90%;
     margin-top: 0;
     display: block;
     text-align: center;
-    font-size: 2.6em;
     padding: 4em 0 3.5em;
-
-    p {
-      width: 80%;
-    }
   }
 
   #save-feature {
@@ -63,25 +61,12 @@ body.touch {
   }
 
   #editorschoice-feature {
-    width: 90%;
     margin: 0 auto;
     padding: 6em 0;
   }
 
-  #article-icons li {
-    transition: opacity 400ms ease-in-out, top 400ms ease-in-out, left 400ms ease-in-out;
-    -webkit-transition:opacity 400ms ease-in-out, top 400ms ease-in-out, left 400ms ease-in-out;
-    -moz-transition:opacity 400ms ease-in-out, top 400ms ease-in-out, left 400ms ease-in-out;
-    -ms-transition: opacity 400ms ease-in-out, top 400ms ease-in-out, left 400ms ease-in-out;
-  }
-
-  #product-heros {
-    float: left;
-    background: #fdfdfd;
-    position: relative;
-    z-index: 10;
-    height: 450px;
-    overflow: hidden;
+  .article-list {
+    display: block;
   }
 
   #container {
@@ -97,14 +82,12 @@ body.touch {
 }
 
 #intro {
-  position: absolute;
-  left: 0;
   z-index: 9;
   width: 100%;
-  margin-top: -180px;
+  padding: 8em 0 6em;
 
   .couch-icon {
-    font-size: 3em;
+    font-size: 2.4em;
     margin: 0em auto -.1em;
     color: white;
   }
@@ -113,7 +96,7 @@ body.touch {
   text-align: center;
 
   h1 {
-    font-size: 3.4em;
+    font-size: 3em;
     font-weight: bold;
     color: white;
     margin: .1em 0;
@@ -144,7 +127,7 @@ body.touch {
       border: none;
       margin: .7em 0;
       padding: 0;
-      @include sentinel-font;
+      @include whitney-font;
     }
   }
 
@@ -180,7 +163,8 @@ body.touch {
 
 .article-list {
   position: relative;
-  font-size: .5em;
+  font-size: .4em;
+  display: none;
 
   li {
     width: 20px;
@@ -198,6 +182,9 @@ body.touch {
 }
 
 #article-icons {
+  display: block;
+  font-size: 1em;
+
   li {
     position: fixed;
 
@@ -245,7 +232,6 @@ body.touch {
 }
 
 #editorschoice-feature {
-  width: 90%;
   margin-left: -45%;
   font-size: 2em;
   margin-top: -140px;
@@ -261,7 +247,7 @@ body.touch {
 
 .section-icon {
   margin: 0 auto .2em;
-  font-size: 4em;
+  font-size: 3.4em;
   display: block;
   @include readabilicons;
 }
@@ -278,36 +264,8 @@ body.touch {
   }
 }
 
-#product-heros {
-  float: left;
-  width: 100%;
-  background: #fdfdfd;
-  position: relative;
-  z-index: 10;
-  height: 450px;
-  overflow: hidden;
-
-  img {
-    position: absolute;
-    left: 50%;
-  }
-
-  h1 {
-    padding: 1.5em 0 .3em;
-    color: #353535;
-    text-align: center;
-    font-size: 2.2em;
-
-    span {
-      font-weight: bold;
-      color: #a6001b;
-      @include sentinel-font;
-    }
-  }
-}
-
 .app-store-info {
-  width: 320px;
+  width: 300px;
   margin: 0 auto;
 
   a {
@@ -320,12 +278,12 @@ body.touch {
 
   p {
     float: left;
-    padding: .4em 0 .4em .9em;
+    padding: .4em 0 .4em .7em;
     border-left :1px solid #e1e1e1;
     color: #999;
-    font-size: 1em;
+    font-size: .96em;
     display: inline-block;
-    margin-left: 1em;
+    margin-left: .7em;
   }
 }
 
@@ -362,7 +320,7 @@ body.touch {
   li {
     &.article-1 {
       margin-left: 30px;
-      margin-top: 135px;
+      margin-top: 115px;
     }
 
     &.article-2 {
@@ -371,18 +329,18 @@ body.touch {
     }
 
     &.article-3 {
-      margin-left: 20px;
+      margin-left: 10px;
       margin-top: 40px;
     }
 
     &.article-4 {
       margin-left: 80px;
-      margin-top: 80px;
+      margin-top: 70px;
     }
 
     &.article-5 {
       margin-left: 100px;
-      margin-top: 150px;
+      margin-top: 130px;
     }
   }
 }
@@ -390,22 +348,22 @@ body.touch {
 #save-article-icons {
   li {
     &.article-1 {
-      margin-left: -160px;
+      margin-left: -145px;
       margin-top: 100px;
     }
 
     &.article-2 {
-      margin-left: -120px;
+      margin-left: -105px;
       margin-top: 10px;
     }
 
     &.article-3 {
-      margin-left: -30px;
+      margin-left: -15px;
       margin-top: -30px;
     }
 
     &.article-4 {
-      margin-left: 60px;
+      margin-left: 75px;
       margin-top: 10px;
     }
 
@@ -416,10 +374,38 @@ body.touch {
   }
 }
 
+#product-heros {
+  float: left;
+  width: 100%;
+  background: #fdfdfd;
+  position: relative;
+  z-index: 10;
+  height: 550px;
+  overflow: hidden;
+
+  img {
+    position: absolute;
+    left: 50%;
+  }
+
+  h1 {
+    padding: 1.5em 0 .3em;
+    color: #353535;
+    text-align: center;
+    font-size: 2.2em;
+
+    span {
+      font-weight: bold;
+      color: #a6001b;
+      @include sentinel-font;
+    }
+  }
+}
+
 #hero1 {
-  margin-left: 85px;
-  top: 195px;
-  width: 90px;
+  margin-left: -150px;
+  top: 165px;
+  width: 300px;
   z-index: 10;
 }
 
@@ -428,6 +414,7 @@ body.touch {
   top: 174px;
   width: 300px;
   z-index: 9;
+  display: none;
 }
 
 .download-link {
@@ -473,33 +460,33 @@ footer {
   margin-right: 0.3em;
 }
 
-@media screen and (min-width: 380px) {
-  #featured-lab-project {
-    .featured-lab-project-image {
-      img {
-        width: 340px;
-      }
+@media screen and (min-width: 520px) {
+  #follow-feature,
+  #recommend-feature,
+  #save-feature,
+  #editorschoice-feature {
+    p {
+      width: 60%;
     }
   }
-}
 
-@media screen and (min-width: 640px) {
-  #default-header {
-    background-size: auto 120%;
+  #editorschoice-feature {
+    width: 60%;
+    margin-left: -30%;
   }
 }
 
 @media screen and (min-width: 748px) {
   #intro {
-    margin-top: -240px;
+    padding: 11em 0 9em;
 
     .couch-icon {
-      font-size: 6em;
+      font-size: 4em;
       margin: 0em auto -.1em;
     }
 
     h1 {
-      font-size: 8em;
+      font-size: 6em;
       margin-bottom: .1em;
     }
 
@@ -518,14 +505,6 @@ footer {
       margin-top: 3em;
       width: 900px;
     }
-  }
-
-  #scroll-instructions {
-    float: left;
-    width: 100%;
-    display: block;
-    font-size: 1.4em;
-    margin: .6em auto;
   }
 
   #download-link {
@@ -549,21 +528,22 @@ footer {
   #recommend-feature,
   #save-feature,
   #editorschoice-feature {
-    width: 40%;
-    margin-left: -20%;
+    width: 90%;
+    margin-left: -45%;
     margin-top: -205px;
     font-size: 2.6em;
 
     p {
+      width: 45%;
       margin: 0 auto;
       font-size: .7em;
     }
   }
 
   #editorschoice-feature {
-    width: 60%;
-    margin-left: -30%;
-    font-size: 4em;
+    width: 70%;
+    margin-left: -35%;
+    font-size: 3em;
     margin-top: -270px;
     padding: 3em 0;
   }
@@ -615,6 +595,7 @@ footer {
     margin-left: -470px;
     top: 304px;
     width: 820px;
+    display: block;
   }
 
   .download-link {
@@ -650,7 +631,6 @@ footer {
       left: auto;
       top: auto;
       margin: 0;
-      padding: 7em 0;
     }
 
     #follow-feature,
@@ -669,7 +649,6 @@ footer {
 
     #editorschoice-feature {
       border-top: none;
-      width: 60%;
       margin: 0 auto;
       padding: 7em 0;
     }
@@ -789,7 +768,8 @@ footer {
 
 
 @media screen and (min-width: 1002px) {
-  .wrapper {
-    width: 1002px;
+
+  #editorschoice-feature {
+    font-size: 4em;
   }
 }
