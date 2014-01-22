@@ -52,10 +52,21 @@ $(function () {
       windowHeightHalf = (windowHeight / 2),
       start = -50;
 
+      console.log(windowWidthHalf, windowHeightHalf);
+
     oldScrollTop = scrollTop;
 
-    if (scrollTop < windowHeight) {
+    if (scrollTop < windowHeight + NEXT_DELAY) {
        resetFeatures();
+
+      if (scrollTop > windowHeight) {
+        $follow.addClass('visible');
+        $recommend.removeClass('visible');
+        $save.removeClass('visible');
+        $choice.removeClass('visible');
+
+         scrollTop = windowHeight - 1;
+      }
 
       $article1.css({
         top: onCoordChange(scrollTop, start, windowHeightHalf - 80),
@@ -81,99 +92,104 @@ $(function () {
         top: onCoordChange(scrollTop, start, windowHeightHalf - 60),
         left: onCoordChange(scrollTop, windowWidthHalf, windowWidthHalf + 140)
       });
-    } else if (scrollTop >= windowHeight && scrollTop < windowHeight + NEXT_DELAY) {
-      $follow.addClass('visible');
-      $recommend.removeClass('visible');
-      $save.removeClass('visible');
-      $choice.removeClass('visible');
-
-    } else if (scrollTop >= windowHeight + NEXT_DELAY && scrollTop < windowHeight * 2 + NEXT_DELAY) {
+    } else if (scrollTop >= windowHeight + NEXT_DELAY && scrollTop < windowHeight * 2 + (NEXT_DELAY * 2)) {
       // Reset our scrollTop to be from the start of this section
       scrollTop = scrollTop - windowHeight - NEXT_DELAY;
       $("#article-icons > li").removeClass('hidden');
       $follow.removeClass('visible');
 
+      if (scrollTop > windowHeight) {
+        $recommend.addClass('visible');
+        $follow.removeClass('visible');
+        $save.removeClass('visible');
+        $choice.removeClass('visible');
+
+         scrollTop = windowHeight - 1;
+      }
+
       $article1.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 80, windowHeightHalf - 260),
-        left: onCoordChange(scrollTop, windowWidthHalf - 170, windowWidthHalf + 150)
+        left: onCoordChange(scrollTop, windowWidthHalf - 170, windowWidthHalf + 130)
       });
 
       $article2.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 190, windowHeightHalf - 200),
-        left: onCoordChange(scrollTop, windowWidthHalf - 130, windowWidthHalf + 70)
+        left: onCoordChange(scrollTop, windowWidthHalf - 130, windowWidthHalf + 50)
       });
 
       $article3.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 180, windowHeightHalf - 160),
-        left: onCoordChange(scrollTop, windowWidthHalf - 10, windowWidthHalf + 110)
+        left: onCoordChange(scrollTop, windowWidthHalf - 10, windowWidthHalf + 90)
       });
 
       $article4.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 200, windowHeightHalf - 80),
-        left: onCoordChange(scrollTop, windowWidthHalf + 100, windowWidthHalf + 80)
+        left: onCoordChange(scrollTop, windowWidthHalf + 100, windowWidthHalf + 60)
       });
 
       $article5.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 60, windowHeightHalf - 40),
-        left: onCoordChange(scrollTop, windowWidthHalf + 140, windowWidthHalf + 160)
+        left: onCoordChange(scrollTop, windowWidthHalf + 140, windowWidthHalf + 140)
       });
 
-    } else if (scrollTop >= windowHeight * 2 + NEXT_DELAY && scrollTop < windowHeight * 2 + (NEXT_DELAY * 2)) {
-      $recommend.addClass('visible');
-      $follow.removeClass('visible');
-      $save.removeClass('visible');
-      $choice.removeClass('visible');
-
-    } else if (scrollTop >= windowHeight * 2 + (NEXT_DELAY * 2) && scrollTop < windowHeight * 3 + (NEXT_DELAY * 2)) {
+    } else if (scrollTop >= windowHeight * 2 + (NEXT_DELAY * 2) && scrollTop < windowHeight * 3 + (NEXT_DELAY * 3)) {
       // Reset our scrollTop to be from the start of this section
       scrollTop = scrollTop - windowHeight * 2 - (NEXT_DELAY * 2);
       $("#article-icons > li").removeClass('hidden');
       $recommend.removeClass('visible');
 
+      if (scrollTop > windowHeight) {
+        $save.addClass('visible');
+        $follow.removeClass('visible');
+        $recommend.removeClass('visible');
+        $choice.removeClass('visible');
+
+        scrollTop = windowHeight - 1;
+      }
+
       $article1.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 260, windowHeightHalf - 110),
-        left: onCoordChange(scrollTop, windowWidthHalf + 150, windowWidthHalf - 190)
+        left: onCoordChange(scrollTop, windowWidthHalf + 130, windowWidthHalf - 170)
       });
 
       $article2.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 200, windowHeightHalf - 200),
-        left: onCoordChange(scrollTop, windowWidthHalf + 70, windowWidthHalf - 150)
+        left: onCoordChange(scrollTop, windowWidthHalf + 50, windowWidthHalf - 130)
       });
 
       $article3.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 160, windowHeightHalf - 260),
-        left: onCoordChange(scrollTop, windowWidthHalf + 110, windowWidthHalf - 15)
+        left: onCoordChange(scrollTop, windowWidthHalf + 90, windowWidthHalf - 15)
       });
 
       $article4.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 80, windowHeightHalf - 200),
-        left: onCoordChange(scrollTop, windowWidthHalf + 80, windowWidthHalf + 135)
+        left: onCoordChange(scrollTop, windowWidthHalf + 60, windowWidthHalf + 115)
       });
 
       $article5.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 40, windowHeightHalf - 110),
-        left: onCoordChange(scrollTop, windowWidthHalf + 160, windowWidthHalf + 175)
+        left: onCoordChange(scrollTop, windowWidthHalf + 140, windowWidthHalf + 155)
       });
 
-     } else if (scrollTop >= windowHeight * 2 + (NEXT_DELAY * 2) && scrollTop < windowHeight * 2 + (NEXT_DELAY * 3)) {
-      $save.addClass('visible');
-      $follow.removeClass('visible');
-      $recommend.removeClass('visible');
-      $choice.removeClass('visible');
-
-    } else if (scrollTop >= windowHeight * 3 + (NEXT_DELAY * 3) && scrollTop < windowHeight * 4 + (NEXT_DELAY * 3)) {
+     } else if (scrollTop >= windowHeight * 3 + (NEXT_DELAY * 3) && scrollTop < windowHeight * 4 + (NEXT_DELAY * 4)) {
       $save.removeClass('visible');
 
       scrollTop = scrollTop - windowHeight * 3 - (NEXT_DELAY * 3);
 
+      if (scrollTop > windowHeight) {
+          $choice.addClass('visible');
+         scrollTop = windowHeight - 1;
+      }
+
       $article1.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 110, start),
-        left: onCoordChange(scrollTop, windowWidthHalf - 190, windowWidthHalf)
+        left: onCoordChange(scrollTop, windowWidthHalf - 170, windowWidthHalf)
       });
 
       $article2.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 200, start),
-        left: onCoordChange(scrollTop, windowWidthHalf - 150, windowWidthHalf)
+        left: onCoordChange(scrollTop, windowWidthHalf - 130, windowWidthHalf)
       });
 
       $article3.css({
@@ -183,20 +199,23 @@ $(function () {
 
       $article4.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 200, start),
-        left: onCoordChange(scrollTop, windowWidthHalf + 135, windowWidthHalf)
+        left: onCoordChange(scrollTop, windowWidthHalf + 115, windowWidthHalf)
       });
 
       $article5.css({
         top: onCoordChange(scrollTop, windowHeightHalf - 110, start),
-        left: onCoordChange(scrollTop, windowWidthHalf + 175, windowWidthHalf)
+        left: onCoordChange(scrollTop, windowWidthHalf + 155, windowWidthHalf)
       });
 
-    } else if (scrollTop >= windowHeight * 4 + (NEXT_DELAY * 3) && scrollTop < windowHeight * 4 + (NEXT_DELAY * 4)) {
-      $choice.addClass('visible');
     }
   };
 
   onResize = function () {
+    windowWidth = $window.width();
+    windowHeight = $window.height();
+    $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3));
+    $("#intro").css('top', windowHeight / 2);
+
     onScroll();
   };
 

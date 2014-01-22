@@ -1,7 +1,5 @@
 @import "reset";
-@import "animations";
 @import "mixins";
-@import "work";
 
 $linkblue: #5692bc;
 $column: 56px;
@@ -27,41 +25,6 @@ a:hover {
   color: #555;
 }
 
-.wrapper {
-  width: 100%;
-}
-
-nav {
-  .couch-icon {
-    color: white;
-    font-size: 2em;
-  }
-}
-
-.registration-nav {
-  @include sentinel-font;
-  color: #fdfdfd;
-  display: inline-block;
-  float: right;
-  font-size: 0.8em;
-  font-weight: 600;
-  line-height: 1.6;
-  position: relative;
-  z-index: 2;
-
-  a {
-    border: 1px solid #900;
-    border-radius: 3px;
-    color: #fdfdfd;
-    font-weight: normal;
-    display: inline-block;
-    padding: 0.1em 0.4em 0 0.4em;
-    text-decoration: none;
-    -webkit-transition: border-color 0.1s;
-    transition: border-color 0.1s;
-  }
-}
-
 .couch-icon {
   display: block;
   @include readabilicons;
@@ -72,10 +35,10 @@ nav {
   left: 0;
   z-index: 9;
   width: 100%;
-  margin-top: -240px;
+  margin-top: -220px;
 
   .couch-icon {
-    font-size: 6em;
+    font-size: 4em;
     margin: 0em auto -.1em;
     color: white;
   }
@@ -84,38 +47,37 @@ nav {
   text-align: center;
 
   h1 {
-    font-size: 8em;
+    font-size: 4em;
     font-weight: bold;
     color: white;
-    margin-bottom: .1em;
-
-    span {
-      font-weight: normal;
-      font-size: .3em;
-      display: block;
-      color: #e94c53;
-      width: 260px;
-      padding: .2em 0;
-      margin: .5em auto 0;
-      border: 1px solid #e94c53;
-      @include border-radius(.2em);
-    }
+    margin: .1em 0;
   }
 
   h2 {
     line-height: 1.3;
-    font-size: 2em;
-    width: 60%;
+    font-size: 1.8em;
+    width: 90%;
     color: #fff;
     margin: 0 auto;
   }
 
   .app-store-info {
-    margin: 8em auto 0;
-    width: 380px;
+    margin: 10em auto 0;
+    width: 100%;
+
+    a {
+      float: none;
+      width: 135px;
+      height: 40px;
+    }
+
     p {
+      float: none;
+      display: block;
       color: #fff;
-      border-color: #e94c53;
+      border: none;
+      margin: .7em 0;
+      padding: 0;
       @include sentinel-font;
     }
   }
@@ -133,7 +95,7 @@ nav {
   width: 100%;
   display: block;
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
   color: #e94c53;
   margin: .6em auto;
   border: none;
@@ -152,15 +114,15 @@ nav {
 
 #article-icons {
   li {
-    width: 30px;
-    height: 50px;
+    width: 20px;
+    height: 30px;
     text-align: center;
     position: fixed;
     left: 50%;
     top: -50px;
-    margin-left: -15px;
+    margin-left: -10px;
     color: #ff565a;
-    font-size: 2.7em;
+    font-size: 2.2em;
     @include readabilicons;
     @include transition(opacity, 400ms, ease-in-out);
 
@@ -182,11 +144,11 @@ nav {
 #editorschoice-feature {
   position: fixed;
   z-index: 1;
-  width: 40%;
+  width: 90%;
   top: 50%;
   opacity: 0;
   left: 50%;
-  margin-left: -20%;
+  margin-left: -45%;
   margin-top: -205px;
   display: block;
   text-align: center;
@@ -202,18 +164,18 @@ nav {
   }
 
   p {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    font-size: .7em;
+    font-size: .6em;
     line-height: 1.4;
   }
 }
 
 #editorschoice-feature {
-  width: 60%;
-  margin-left: -30%;
-  font-size: 4em;
-  margin-top: -270px;
+  width: 90%;
+  margin-left: -45%;
+  font-size: 2em;
+  margin-top: -140px;
   background: transparent url(../images/badge.svg) center center no-repeat;
   background-size: 100% auto;
   padding: 3em 0;
@@ -226,7 +188,7 @@ nav {
 
 .section-icon {
   margin: 0 auto .2em;
-  font-size: 6em;
+  font-size: 5em;
   display: block;
   @include readabilicons;
 }
@@ -239,7 +201,7 @@ nav {
 
 #recommend-feature {
   .section-icon {
-    margin-left: -.5em;
+    margin-left: -.7em;
   }
 }
 
@@ -247,7 +209,7 @@ nav {
   background: #fdfdfd;
   position: relative;
   z-index: 10;
-  height: 970px;
+  height: 450px;
 
   img {
     position: absolute;
@@ -255,10 +217,10 @@ nav {
   }
 
   h1 {
-    padding: 1.5em 0 .2em;
+    padding: 1.5em 0 .3em;
     color: #353535;
     text-align: center;
-    font-size: 5em;
+    font-size: 2.6em;
 
     span {
       font-weight: bold;
@@ -269,16 +231,14 @@ nav {
 }
 
 .app-store-info {
-  width: 330px;
+  width: 320px;
   margin: 0 auto;
-  @include whitney-font;
 
   a {
-    color: white;
     display: inline-block;
 
     &:hover {
-      color: #f5b4be;
+      color: #d47979;
     }
   }
 
@@ -287,23 +247,23 @@ nav {
     padding: .4em 0 .4em .9em;
     border-left :1px solid #e1e1e1;
     color: #999;
-    font-size: 1.4em;
+    font-size: 1em;
     display: inline-block;
     margin-left: 1em;
   }
 }
 
 #hero1 {
-  margin-left: 230px;
-  top: 357px;
-  width: 240px;
+  margin-left: 85px;
+  top: 195px;
+  width: 90px;
   z-index: 10;
 }
 
 #hero2 {
-  margin-left: -470px;
-  top: 304px;
-  width: 820px;
+  margin-left: -175px;
+  top: 174px;
+  width: 300px;
   z-index: 9;
 }
 
@@ -311,8 +271,8 @@ nav {
   float: left;
   font-size: 0;
   text-indent: -9999px;
-  width: 135px;
-  height: 40px;
+  width: 100px;
+  height: 27px;
   background: transparent url(../images/appstorebadge.svg) center center no-repeat;
   background-size: 100% auto;
   display: inline-block;
@@ -320,27 +280,31 @@ nav {
 
 footer {
   background: #fdfdfd;
+  position: relative;
+  z-index: 10;
 
   ul {
     border-top: 1px solid #e8e8e8;
     margin: 0 auto;
     width: 90%;
-    padding: 2em 0;
+    padding: 1em 0;
   }
 
   li {
-    display: inline-block;
-    margin-left: 0.6em;
+    display: block;
+    padding: .6em 0;
+    font-size: 1.6em;
+    text-align: center;
 
     &:first-child {
       color: #353535;
+      font-size: 1.8em;
       @include readabilicons;
     }
   }
 }
 
 .feedback-link {
-  float: right;
   margin-right: 0.3em;
 }
 
@@ -361,9 +325,149 @@ footer {
 }
 
 @media screen and (min-width: 748px) {
-  .wrapper {
-    width: 748px;
+  #intro {
+    margin-top: -240px;
+
+    .couch-icon {
+      font-size: 6em;
+      margin: 0em auto -.1em;
+    }
+
+    h1 {
+      font-size: 8em;
+      margin-bottom: .1em;
+    }
+
+    h2 {
+      font-size: 2em;
+      width: 60%;
+      margin: 0 auto;
+    }
+
+    .app-store-info {
+      margin: 8em auto 0;
+      width: 380px;
+    }
+
+    .device-image {
+      margin-top: 3em;
+      width: 900px;
+    }
+  }
+
+  #scroll-instructions {
+    float: left;
+    width: 100%;
+    display: block;
+    font-size: 1.4em;
+    margin: .6em auto;
+  }
+
+  #download-link {
+    width: 140px;
+  }
+
+  #article-icons {
+    li {
+      width: 30px;
+      height: 50px;
+      top: -50px;
+      margin-left: -15px;
+      font-size: 2.7em;
+    }
+  }
+
+  #follow-feature,
+  #recommend-feature,
+  #save-feature,
+  #editorschoice-feature {
+    width: 40%;
+    margin-left: -20%;
+    margin-top: -205px;
+    font-size: 2.6em;
+
+    p {
+      margin: 0 auto;
+      font-size: .7em;
+    }
+  }
+
+  #editorschoice-feature {
+    width: 60%;
+    margin-left: -30%;
+    font-size: 4em;
+    margin-top: -270px;
+    padding: 3em 0;
+  }
+
+  .section-icon {
+    margin: 0 auto .2em;
+    font-size: 6em;
+  }
+
+  #follow-feature {
+    .section-icon {
+      margin-left: .1em;
+    }
+  }
+
+  #recommend-feature {
+    .section-icon {
+      margin-left: -.5em;
+    }
+  }
+
+  #product-heros {
+    height: 970px;
+
+    h1 {
+      padding: 1.5em 0 .2em;
+      font-size: 5em;
+    }
+  }
+
+  .app-store-info {
+    width: 530px;
     margin: 0 auto;
+
+    p {
+      padding: .4em 0 .4em .9em;
+      font-size: 1.4em;
+      margin-left: 1em;
+    }
+  }
+
+  #hero1 {
+    margin-left: 230px;
+    top: 357px;
+    width: 240px;
+  }
+
+  #hero2 {
+    margin-left: -470px;
+    top: 304px;
+    width: 820px;
+  }
+
+  .download-link {
+    width: 135px;
+    height: 40px;
+  }
+
+  footer {
+    ul {
+      width: 90%;
+      padding: 2em 0;
+    }
+
+    li {
+      margin-left: 0.6em;
+    }
+  }
+
+  .feedback-link {
+    float: right;
+    margin-right: 0.3em;
   }
 }
 
