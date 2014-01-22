@@ -1,5 +1,5 @@
 3.2.10 (Media Mark)
-ea94ac2cd3b47a3a5b2f2ef80c0517093f90c695
+784161ba7549dc34853c37a0381ddafa9180b4ae
 o:Sass::Tree::RootNode
 :@template"Î.@import "reset";
 @import "mixins";
@@ -454,7 +454,7 @@ footer {
   li {
     display: block;
     padding: .6em 0;
-    font-size: 1.6em;
+    font-size: 1.2em;
     text-align: center;
 
     &:first-child {
@@ -563,7 +563,7 @@ footer {
     font-size: 2.6em;
 
     p {
-      width: 45%;
+      width: 50%;
       margin: 0 auto;
       font-size: .7em;
     }
@@ -2122,7 +2122,7 @@ block;
 ;
 @
 ;iÅ;";#o;;i ;["font-size;[ ;o;; ;!;"
-1.6em;
+1.2em;
 @
 ;
 @
@@ -2405,7 +2405,7 @@ width;[ ;o;; ;!;"90%;
 ;
 @
 ;i0;";#o;;i ;[o;;i ;["
-width;[ ;o;; ;!;"45%;
+width;[ ;o;; ;!;"50%;
 @
 ;
 @

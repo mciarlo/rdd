@@ -399,7 +399,7 @@ footer {
   footer li {
     display: block;
     padding: .6em 0;
-    font-size: 1.6em;
+    font-size: 1.2em;
     text-align: center; }
     footer li:first-child {
       color: #353535;
@@ -477,7 +477,7 @@ footer {
     #recommend-feature p,
     #save-feature p,
     #editorschoice-feature p {
-      width: 45%;
+      width: 50%;
       margin: 0 auto;
       font-size: .7em; }
 
