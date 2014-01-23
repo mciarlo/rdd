@@ -14,3 +14,17 @@
     width: 550px;
   }
 }
+
+#follow-feature.visible,
+#recommend-feature.visible,
+#save-feature.visible,
+#editorschoice-feature.visible {
+  display: block;
+}
+
+#follow-feature,
+#recommend-feature,
+#save-feature,
+#editorschoice-feature {
+  display: none;
+}
