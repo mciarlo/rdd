@@ -10,8 +10,9 @@
 }
 
 #editorschoice-feature {
+  margin-left: -128px;
   width: 255px;
-  background: transparent url(../images/badge.png) center center no-repeat;
+  background: transparent url(../images/badge_ie_small.png) center center no-repeat;
 }
 
 @media screen and (min-width: 748px) {
@@ -20,6 +21,7 @@
   }
 
   #editorschoice-feature {
+    margin-left: -234px;
     width: 468px;
     background: transparent url(../images/badge_ie_medium.png) center center no-repeat;
   }
@@ -27,6 +29,7 @@
 
 @media screen and (min-width: 1002px) {
   #editorschoice-feature {
+    margin-left: -436px;
     width: 872px;
     background: transparent url(../images/badge_ie_large.png) center center no-repeat;
   }
