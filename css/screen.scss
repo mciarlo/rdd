@@ -44,17 +44,9 @@ body.touch {
   }
 
   #product-heros {
-    height: 1780px;
     border-top: 5px solid #a6001b;
     h1 {
-      padding-bottom: .2em;
-    }
-
-    h2 {
-      display: block;
-      color: #555;
-      font-size: 1.2em;
-      text-align: center;
+      padding-bottom: .1em;
     }
   }
 
@@ -86,12 +78,16 @@ body.touch {
     }
   }
 
+  #screenshot-wrapper {
+    height: 594px;
+  }
+
   #featured-banner-content {
     width: 256px;
     background: transparent url(../images/badge_red.svg) center center no-repeat;
     background-size: 100% auto;
     padding: 5em 0;
-    margin: 660px auto 0;
+    margin: 3em auto 0;
     text-align: center;
     color: #333;
 
@@ -116,19 +112,8 @@ body.touch {
 
   .app-store-info.touch {
     display: block;
-    margin-top: 4em;
-
-    p {
-      display: none;
-    }
-  }
-
-  #hero1 {
-    top: 130px;
-  }
-
-  #hero2 {
-    top: 140px;
+    @include overflowfix;
+    height: 40px;
   }
 }
 
@@ -356,7 +341,7 @@ body.touch {
 
 .app-store-info {
   width: 300px;
-  margin: 0 auto;
+  margin: 3em auto;
 
   a {
     display: inline-block;
@@ -372,7 +357,6 @@ body.touch {
     border-left :1px solid #e1e1e1;
     color: #999;
     font-size: .96em;
-    display: inline-block;
     margin-left: .7em;
   }
 }
@@ -470,11 +454,22 @@ body.touch {
   background: #fdfdfd;
   position: relative;
   z-index: 10;
-  height: 550px;
   overflow: hidden;
+  @include overflowfix;
 
   .app-store-info {
     width: 135px;
+    margin: 3em auto 4em;
+
+    p {
+      display: none;
+    }
+    span {
+      color: #333;
+      display: block;
+      text-align: center;
+      margin-bottom: .5em;
+    }
   }
 
   img {
@@ -483,7 +478,7 @@ body.touch {
   }
 
   h1 {
-    padding: 1.5em 0 .3em;
+    padding: 1.5em 0 .1em;
     color: #353535;
     text-align: center;
     font-size: 2em;
@@ -495,24 +490,35 @@ body.touch {
   }
 
   h2 {
-    display: none;
+    display: block;
+    color: #555;
+    font-size: 1.2em;
+    text-align: center;
   }
+}
+
+#screenshot-wrapper {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: 1em 0 0;
 }
 
 #hero1 {
   margin-left: -140px;
-  top: 165px;
+  top: 0;
   width: 280px;
   z-index: 10;
 }
 
 #hero2 {
   margin-left: -175px;
-  top: 174px;
+  top: 0;
   width: 300px;
   z-index: 9;
   display: none;
 }
+
 .download-link {
   float: left;
   font-size: 0;
@@ -558,28 +564,6 @@ footer {
 
 @media screen and (min-width: 520px) {
   body.touch {
-    #product-heros {
-      height: 1850px;
-
-      .app-store-info.touch {
-        width: 135px;
-        height: 40px;
-        margin: 3em auto;
-
-        p {
-          display: none;
-        }
-      }
-
-      h1 {
-        padding-bottom: .1em;
-      }
-
-      h2 {
-        font-size: 1.7em;
-      }
-    }
-
     #feature-rundown {
       p {
         font-size: 1.4em;
@@ -593,12 +577,31 @@ footer {
     #featured-banner-content {
       width: 440px;
       font-size: 1.3em;
-      margin-top: 680px;
     }
 
-    #hero1 {
-      top: 190px;
+    #screenshot-wrapper {
+      height: 846px;
     }
+  }
+
+  #product-heros {
+    .app-store-info.touch {
+      width: 135px;
+      height: 40px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.7em;
+    }
+  }
+
+  #screenshot-wrapper {
+    height: 600px;
+    margin-top: 1.5em;
   }
 
   #follow-feature,
@@ -616,14 +619,8 @@ footer {
   }
 
   #product-heros {
-    height: 600px;
-
     h1 {
       font-size: 3em;
-    }
-
-    .app-store-info {
-      width: 416px;
     }
 
     p {
@@ -633,7 +630,8 @@ footer {
   }
 
   #hero1 {
-    top: 200px;
+    width: 400px;
+    margin-left: -200px;
   }
 }
 
@@ -730,35 +728,43 @@ footer {
     }
   }
 
-  #product-heros {
-    height: 780px;
+  #screenshot-wrapper {
+    height: 425px;
+  }
 
+  #product-heros {
     h1 {
-      padding: 1em 0 .2em;
-      font-size: 5em;
+      padding-top: 1em;
+      font-size: 3.4em;
     }
 
     .app-store-info {
       width: 425px;
-      margin: 0 auto;
+      margin: 3em auto 7em;
 
       p {
         padding: .4em 0 .4em .9em;
         font-size: 1.4em;
         margin-left: 1em;
+        color: #777;
+        display: inline-block;
+      }
+
+      span {
+        display: none;
       }
     }
   }
 
   #hero1 {
-    margin-left: 180px;
-    top: 286px;
+    margin-left: 170px;
+    top: 34px;
     width: 186px;
   }
 
   #hero2 {
     margin-left: -360px;
-    top: 254px;
+    top: 0;
     width: 620px;
     display: block;
   }
@@ -807,6 +813,10 @@ footer {
       }
     }
 
+    #screenshot-wrapper {
+      height: 426px;
+    }
+
     #save-feature {
       padding-bottom: 3em;
       border-bottom: 1px solid #d22c2c;
@@ -821,21 +831,12 @@ footer {
       display: block;
     }
 
-    #hero1 {
-      top: 236px;
-    }
-
-    #hero2 {
-      top: 206px;
-    }
-
     #product-heros {
       float: left;
       background: #fdfdfd;
       position: relative;
       z-index: 10;
       overflow: hidden;
-      height: 1400px;
 
       h1 {
         font-size: 4em;
@@ -868,6 +869,7 @@ footer {
 
     #feature-rundown {
       margin-top: -2em;
+
       li {
         display: inline-block;
         width: 27%;
@@ -880,8 +882,8 @@ footer {
     }
 
     #featured-banner-content {
-      margin-top: 500px;
       width: 420px;
+      margin-top: .5em;
       font-size: 1.5em;
     }
   }
@@ -977,11 +979,13 @@ footer {
 @media screen and (min-width: 1002px) {
   body.touch {
     #product-heros {
-      height: 1540px;
-
       .app-store-info.touch {
         margin-top: 5em;
       }
+    }
+
+    #screenshot-wrapper {
+      height: 564px;
     }
 
     #feature-rundown {
@@ -994,18 +998,10 @@ footer {
     }
 
     #featured-banner-content {
-      margin-top: 620px;
       width: 440px;
       font-size: 1.6em;
     }
 
-    #hero1 {
-      top: 262px;
-    }
-
-    #hero2 {
-      top: 204px;
-    }
   }
 
   #intro {
@@ -1023,23 +1019,24 @@ footer {
   }
 
   #product-heros {
-    height: 960px;
-
     h1 {
-      padding: 1em 0 .1em;
-      font-size: 6em;
+      font-size: 4em;
     }
+  }
+
+  #screenshot-wrapper {
+    height: 565px;
   }
 
   #hero1 {
     margin-left: 230px;
-    top: 327px;
+    top: 55px;
     width: 240px;
   }
 
   #hero2 {
     margin-left: -470px;
-    top: 274px;
+    top: 0;
     width: 820px;
   }
 

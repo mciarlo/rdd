@@ -99,15 +99,9 @@ body.touch #save-feature,
 body.touch #editorschoice-feature {
   display: none; }
 body.touch #product-heros {
-  height: 1780px;
   border-top: 5px solid #a6001b; }
   body.touch #product-heros h1 {
-    padding-bottom: .2em; }
-  body.touch #product-heros h2 {
-    display: block;
-    color: #555;
-    font-size: 1.2em;
-    text-align: center; }
+    padding-bottom: .1em; }
 body.touch #feature-rundown {
   display: block;
   width: 90%;
@@ -128,12 +122,14 @@ body.touch #feature-rundown {
     line-height: 1.4;
     font-size: 1.2em;
     color: #555; }
+body.touch #screenshot-wrapper {
+  height: 594px; }
 body.touch #featured-banner-content {
   width: 256px;
   background: transparent url(../images/badge_red.svg) center center no-repeat;
   background-size: 100% auto;
   padding: 5em 0;
-  margin: 660px auto 0;
+  margin: 3em auto 0;
   text-align: center;
   color: #333; }
   body.touch #featured-banner-content h3 {
@@ -150,13 +146,11 @@ body.touch .app-store-info.first {
   display: none; }
 body.touch .app-store-info.touch {
   display: block;
-  margin-top: 4em; }
-  body.touch .app-store-info.touch p {
-    display: none; }
-body.touch #hero1 {
-  top: 130px; }
-body.touch #hero2 {
-  top: 140px; }
+  height: 40px; }
+  body.touch .app-store-info.touch:after {
+    content: "";
+    clear: both;
+    display: block; }
 
 #feature-rundown,
 #featured-banner,
@@ -360,7 +354,7 @@ body.touch #hero2 {
 
 .app-store-info {
   width: 300px;
-  margin: 0 auto; }
+  margin: 3em auto; }
   .app-store-info a {
     display: inline-block; }
     .app-store-info a:hover {
@@ -371,7 +365,6 @@ body.touch #hero2 {
     border-left: 1px solid #e1e1e1;
     color: #999;
     font-size: .96em;
-    display: inline-block;
     margin-left: .7em; }
 
 #follow-article-icons li.article-1 {
@@ -428,15 +421,26 @@ body.touch #hero2 {
   background: #fdfdfd;
   position: relative;
   z-index: 10;
-  height: 550px;
   overflow: hidden; }
+  #product-heros:after {
+    content: "";
+    clear: both;
+    display: block; }
   #product-heros .app-store-info {
-    width: 135px; }
+    width: 135px;
+    margin: 3em auto 4em; }
+    #product-heros .app-store-info p {
+      display: none; }
+    #product-heros .app-store-info span {
+      color: #333;
+      display: block;
+      text-align: center;
+      margin-bottom: .5em; }
   #product-heros img {
     position: absolute;
     left: 50%; }
   #product-heros h1 {
-    padding: 1.5em 0 .3em;
+    padding: 1.5em 0 .1em;
     color: #353535;
     text-align: center;
     font-size: 2em; }
@@ -444,17 +448,26 @@ body.touch #hero2 {
       font-weight: bold;
       color: #a6001b; }
   #product-heros h2 {
-    display: none; }
+    display: block;
+    color: #555;
+    font-size: 1.2em;
+    text-align: center; }
+
+#screenshot-wrapper {
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin: 1em 0 0; }
 
 #hero1 {
   margin-left: -140px;
-  top: 165px;
+  top: 0;
   width: 280px;
   z-index: 10; }
 
 #hero2 {
   margin-left: -175px;
-  top: 174px;
+  top: 0;
   width: 300px;
   z-index: 9;
   display: none; }
@@ -494,18 +507,6 @@ footer {
   margin-right: 0.3em; }
 
 @media screen and (min-width: 520px) {
-  body.touch #product-heros {
-    height: 1850px; }
-    body.touch #product-heros .app-store-info.touch {
-      width: 135px;
-      height: 40px;
-      margin: 3em auto; }
-      body.touch #product-heros .app-store-info.touch p {
-        display: none; }
-    body.touch #product-heros h1 {
-      padding-bottom: .1em; }
-    body.touch #product-heros h2 {
-      font-size: 1.7em; }
   body.touch #feature-rundown p {
     font-size: 1.4em; }
   body.touch #feature-rundown li {
@@ -513,10 +514,21 @@ footer {
     padding: 1.5em 0; }
   body.touch #featured-banner-content {
     width: 440px;
-    font-size: 1.3em;
-    margin-top: 680px; }
-  body.touch #hero1 {
-    top: 190px; }
+    font-size: 1.3em; }
+  body.touch #screenshot-wrapper {
+    height: 846px; }
+
+  #product-heros .app-store-info.touch {
+    width: 135px;
+    height: 40px; }
+  #product-heros h1 {
+    font-size: 2em; }
+  #product-heros h2 {
+    font-size: 1.7em; }
+
+  #screenshot-wrapper {
+    height: 600px;
+    margin-top: 1.5em; }
 
   #follow-feature p,
   #recommend-feature p,
@@ -528,18 +540,15 @@ footer {
     width: 60%;
     margin-left: -30%; }
 
-  #product-heros {
-    height: 600px; }
-    #product-heros h1 {
-      font-size: 3em; }
-    #product-heros .app-store-info {
-      width: 416px; }
-    #product-heros p {
-      font-size: 1.4em;
-      display: inline-block; }
+  #product-heros h1 {
+    font-size: 3em; }
+  #product-heros p {
+    font-size: 1.4em;
+    display: inline-block; }
 
   #hero1 {
-    top: 200px; } }
+    width: 400px;
+    margin-left: -200px; } }
 @media screen and (min-width: 748px) {
   #intro {
     padding: 11em 0 9em; }
@@ -608,27 +617,32 @@ footer {
   #recommend-feature .section-icon {
     margin-left: -.8em; }
 
-  #product-heros {
-    height: 780px; }
-    #product-heros h1 {
-      padding: 1em 0 .2em;
-      font-size: 5em; }
-    #product-heros .app-store-info {
-      width: 425px;
-      margin: 0 auto; }
-      #product-heros .app-store-info p {
-        padding: .4em 0 .4em .9em;
-        font-size: 1.4em;
-        margin-left: 1em; }
+  #screenshot-wrapper {
+    height: 425px; }
+
+  #product-heros h1 {
+    padding-top: 1em;
+    font-size: 3.4em; }
+  #product-heros .app-store-info {
+    width: 425px;
+    margin: 3em auto 7em; }
+    #product-heros .app-store-info p {
+      padding: .4em 0 .4em .9em;
+      font-size: 1.4em;
+      margin-left: 1em;
+      color: #777;
+      display: inline-block; }
+    #product-heros .app-store-info span {
+      display: none; }
 
   #hero1 {
-    margin-left: 180px;
-    top: 286px;
+    margin-left: 170px;
+    top: 34px;
     width: 186px; }
 
   #hero2 {
     margin-left: -360px;
-    top: 254px;
+    top: 0;
     width: 620px;
     display: block; }
 
@@ -660,6 +674,8 @@ footer {
   body.touch #save-feature p,
   body.touch #editorschoice-feature p {
     width: 40%; }
+  body.touch #screenshot-wrapper {
+    height: 426px; }
   body.touch #save-feature {
     padding-bottom: 3em;
     border-bottom: 1px solid #d22c2c; }
@@ -668,17 +684,12 @@ footer {
     margin: 0 auto; }
   body.touch .article-list {
     display: block; }
-  body.touch #hero1 {
-    top: 236px; }
-  body.touch #hero2 {
-    top: 206px; }
   body.touch #product-heros {
     float: left;
     background: #fdfdfd;
     position: relative;
     z-index: 10;
-    overflow: hidden;
-    height: 1400px; }
+    overflow: hidden; }
     body.touch #product-heros h1 {
       font-size: 4em; }
     body.touch #product-heros h2 {
@@ -704,8 +715,8 @@ footer {
       body.touch #feature-rundown li p {
         font-size: 1.3em; }
   body.touch #featured-banner-content {
-    margin-top: 500px;
     width: 420px;
+    margin-top: .5em;
     font-size: 1.5em; }
 
   #follow-article-icons li.article-1 {
@@ -756,23 +767,18 @@ footer {
     margin-left: 160px;
     margin-top: 100px; } }
 @media screen and (min-width: 1002px) {
-  body.touch #product-heros {
-    height: 1540px; }
-    body.touch #product-heros .app-store-info.touch {
-      margin-top: 5em; }
+  body.touch #product-heros .app-store-info.touch {
+    margin-top: 5em; }
+  body.touch #screenshot-wrapper {
+    height: 564px; }
   body.touch #feature-rundown li {
     font-size: 1em;
     display: inline-block;
     width: 27%;
     margin: 0 2%; }
   body.touch #featured-banner-content {
-    margin-top: 620px;
     width: 440px;
     font-size: 1.6em; }
-  body.touch #hero1 {
-    top: 262px; }
-  body.touch #hero2 {
-    top: 204px; }
 
   #intro .couch-icon {
     font-size: 5em; }
@@ -781,20 +787,20 @@ footer {
   #intro h2 {
     font-size: 2.6em; }
 
-  #product-heros {
-    height: 960px; }
-    #product-heros h1 {
-      padding: 1em 0 .1em;
-      font-size: 6em; }
+  #product-heros h1 {
+    font-size: 4em; }
+
+  #screenshot-wrapper {
+    height: 565px; }
 
   #hero1 {
     margin-left: 230px;
-    top: 327px;
+    top: 55px;
     width: 240px; }
 
   #hero2 {
     margin-left: -470px;
-    top: 274px;
+    top: 0;
     width: 820px; }
 
   #editorschoice-feature {
