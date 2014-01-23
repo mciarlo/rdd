@@ -8,7 +8,6 @@
 }
 
 #featured-banner-content {
-  /* I'm sorry for this - REGRET NOTHING */
   display: none !important;
 }
 
@@ -19,7 +18,7 @@
 }
 
 body.touch #featured-banner-content {
-  display: block;
+  display: block !important;
   width: 311px;
   background: transparent url(../images/badge_red_ie_small.png) center center no-repeat;
 }
