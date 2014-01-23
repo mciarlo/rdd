@@ -46,6 +46,9 @@ body.touch {
   #product-heros {
     height: 1780px;
     border-top: 5px solid #a6001b;
+    h1 {
+      padding-bottom: .1em;
+    }
 
     h2 {
       display: block;
@@ -88,7 +91,7 @@ body.touch {
     background: transparent url(../images/badge_red.svg) center center no-repeat;
     background-size: 100% auto;
     padding: 5em 0;
-    margin: 670px auto 0;
+    margin: 660px auto 0;
     text-align: center;
     color: #333;
 
@@ -121,11 +124,11 @@ body.touch {
   }
 
   #hero1 {
-    top: 145px;
+    top: 125px;
   }
 
   #hero2 {
-    top: 154px;
+    top: 134px;
   }
 }
 

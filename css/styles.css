@@ -101,6 +101,8 @@ body.touch #editorschoice-feature {
 body.touch #product-heros {
   height: 1780px;
   border-top: 5px solid #a6001b; }
+  body.touch #product-heros h1 {
+    padding-bottom: .1em; }
   body.touch #product-heros h2 {
     display: block;
     color: #555;
@@ -131,7 +133,7 @@ body.touch #featured-banner-content {
   background: transparent url(../images/badge_red.svg) center center no-repeat;
   background-size: 100% auto;
   padding: 5em 0;
-  margin: 670px auto 0;
+  margin: 660px auto 0;
   text-align: center;
   color: #333; }
   body.touch #featured-banner-content h3 {
@@ -152,9 +154,9 @@ body.touch .app-store-info.touch {
   body.touch .app-store-info.touch p {
     display: none; }
 body.touch #hero1 {
-  top: 145px; }
+  top: 125px; }
 body.touch #hero2 {
-  top: 154px; }
+  top: 134px; }
 
 #feature-rundown,
 #featured-banner,
