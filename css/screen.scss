@@ -277,6 +277,7 @@ footer {
     margin-left: 170px;
     top: 34px;
     width: 186px;
+    @include animation(slideInRight, 800ms, none, ease-in-out, 0);
   }
 
   #hero2 {
@@ -284,6 +285,7 @@ footer {
     top: 0;
     width: 620px;
     display: block;
+    @include animation(slideInLeft, 800ms, none, ease-in-out, 0);
   }
 
   .download-link {
@@ -408,5 +410,95 @@ footer {
     margin-left: -470px;
     top: 0;
     width: 820px;
+  }
+}
+
+/* Animations ----------------------------*/
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+}
+
+@-moz-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0px);
+  }
+}
+
+@-ms-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -ms-transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translateX(0px);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+  }
+}
+
+@-moz-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0px);
+  }
+}
+
+@-ms-keyframes slideInRight {
+  0% {
+    opacity: 0;
+    -ms-transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: translateX(0px);
   }
 }

@@ -10,31 +10,12 @@
 
 }
 
-@mixin border-radius($radius) {
-  border-radius: $radius;
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -ms-border-radius: $radius;
-}
-
 @mixin sentinel-font {
   font-family: 'Sentinel A', 'Sentinel B', 'Georgia', serif;
 }
 
-@mixin mercury-font {
-  font-family: 'Mercury Text G1 A', 'Mercury Text G1 B', serif;
-}
-
-@mixin gotham-font {
-  font-family: 'Gotham Narrow A', 'Gotham Narrow B', Arial Narrow, sans-serif;
-}
-
 @mixin readabilicons {
   font-family: 'readabiliconsregular';
-}
-
-@mixin whitney-font {
-  font-family:'Whitney A', 'Whitney B', Arial Narrow, sans-serif;
 }
 
 @mixin opacity($float, $percent) {
@@ -42,20 +23,6 @@
   filter: alpha(opacity=$percent);
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = #{$percent});
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity =  #{$percent});
-}
-
-@mixin box-shadow($x, $y, $color) {
-  box-shadow: 0 $x $y $color;
-  -webkit-box-shadow: 0 $x $y $color;
-  -moz-box-shadow: 0 $x $y $color;
-  -ms-box-shadow: 0 $x $y $color;
-}
-
-@mixin text-shadow($x, $y, $color) {
-  text-shadow: 0 $x $y $color;
-  -webkit-text-shadow: 0 $x $y $color;
-  -moz-text-shadow: 0 $x $y $color;
-  -ms-text-shadow: 0 $x $y $color;
 }
 
 @mixin transition($property, $duration, $easing) {
@@ -72,18 +39,6 @@
   -ms-transform: translate3d($x, $y, $z);
 }
 
-@mixin transform($property, $value, $duration) {
-  transform: $property($value);
-  -webkit-transform: $property($value);
-  -moz-transform: $property($value);
-  -ms-transform: $property($value);
-
-  transition-duration: $duration;
-  -webkit-transition-duration: $property($value);
-  -moz-transition-duration: $property($value);
-  -ms-transition-duration: $property($value);
-}
-
 @mixin animation($name, $duration, $repeat, $easing, $delay) {
   animation: $name $duration $repeat $easing;
   -webkit-animation: $name $duration $repeat $easing;
@@ -95,24 +50,10 @@
   -moz-animation-delay: $delay;
 }
 
-@mixin rotate($value) {
-  transform: rotateZ($value);
-  -webkit-transform: rotateZ($value);
-  -moz-transform: rotateZ($value);
-  -ms-transform: rotateZ($value);
-}
-
 @mixin overflowfix {
   &:after {
     content: "";
     clear: both;
     display: block;
   }
-}
-
-@mixin box-sizing {
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
 }
