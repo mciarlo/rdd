@@ -69,7 +69,7 @@ table {
 
 html,
 body {
-  color: #fff;
+  color: #fdfdfd;
   font-size: 1em;
   background-color: #a6001b;
   font-family: 'Sentinel A', 'Sentinel B', 'Georgia', serif; }
@@ -85,6 +85,11 @@ a:visited {
 
 a:hover {
   color: #555; }
+
+h1, h2, h3 {
+  -webkit-font-smoothing: antialiased; }
+  h1:before, h2:before, h3:before {
+    -webkit-font-smoothing: subpixel-antialiased; }
 
 /* Touch Styles -----------------------*/
 body.touch #intro {
@@ -123,7 +128,32 @@ body.touch #container {
 
 .couch-icon {
   display: block;
-  font-family: 'readabiliconsregular'; }
+  font-family: 'readabiliconsregular';
+  -webkit-font-smoothing: antialiased; }
+  .couch-icon:before {
+    -webkit-font-smoothing: subpixel-antialiased; }
+
+.arrow-icon {
+  display: block;
+  margin: 2.5em auto 0;
+  width: 20px;
+  height: 20px;
+  border-right: 2px solid #fdfdfd;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid #fdfdfd;
+  border-left: 2px solid transparent;
+  transform: rotateZ(45deg);
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  animation: pulse 2s infinite ease-in-out;
+  -webkit-animation: pulse 2s infinite ease-in-out;
+  -moz-animation: pulse 2s infinite ease-in-out;
+  -ms-animation: pulse 2s infinite ease-in-out;
+  animation-delay: 0;
+  -webkit-animation-delay: 0;
+  -ms-animation-delay: 0;
+  -moz-animation-delay: 0; }
 
 #intro {
   z-index: 9;
@@ -144,23 +174,32 @@ body.touch #container {
     line-height: 1.3;
     font-size: 1.4em;
     width: 90%;
-    color: #fff;
+    color: #fdfdfd;
     margin: 0 auto; }
   #intro .app-store-info {
     margin: 6em auto 0;
-    width: 100%; }
+    width: 320px; }
+    #intro .app-store-info:after {
+      content: "";
+      clear: both;
+      display: block; }
     #intro .app-store-info a {
-      float: none;
+      float: left;
       width: 135px;
       height: 40px; }
     #intro .app-store-info p {
-      float: none;
+      float: left;
       display: block;
-      color: #fff;
+      color: #fdfdfd;
       border: none;
-      margin: .7em 0;
-      padding: 0;
-      font-family: 'Whitney A', 'Whitney B', Arial Narrow, sans-serif; }
+      font-size: .9em;
+      line-height: 1.4;
+      margin: 0 1em 0 10px;
+      padding: .1em 1em .1em 20px;
+      border-right: 1px solid #db1f3e;
+      text-align: right; }
+      #intro .app-store-info p span {
+        display: block; }
   #intro .device-image {
     margin-top: 3em;
     width: 900px;
@@ -247,8 +286,8 @@ body.touch #container {
   #save-feature p,
   #editorschoice-feature p {
     width: 90%;
-    margin: 0 auto;
-    font-size: .5em;
+    margin: .1em auto;
+    font-size: .6em;
     line-height: 1.4; }
 
 #editorschoice-feature {
@@ -260,7 +299,9 @@ body.touch #container {
   padding: 3em 0; }
   #editorschoice-feature p {
     color: #e94c53;
-    font-family: 'Whitney A', 'Whitney B', Arial Narrow, sans-serif; }
+    font-family: Georgia;
+    font-weight: 100;
+    text-transform: uppercase; }
 
 .section-icon {
   margin: 0 auto .2em;
@@ -403,7 +444,7 @@ footer {
     text-align: center; }
     footer li:first-child {
       color: #353535;
-      font-size: 1.8em;
+      font-size: 1.6em;
       font-family: 'readabiliconsregular'; }
 
 .feedback-link {
@@ -446,7 +487,10 @@ footer {
       margin: 0 auto; }
     #intro .app-store-info {
       margin: 8em auto 0;
-      width: 380px; }
+      width: 362px; }
+      #intro .app-store-info p {
+        font-size: 1em;
+        margin-left: 20px; }
     #intro .device-image {
       margin-top: 3em;
       width: 900px; }
@@ -462,7 +506,7 @@ footer {
       height: 50px;
       top: -50px;
       margin-left: -15px;
-      font-size: 2.2em; }
+      font-size: 2.4em; }
 
   #follow-feature,
   #recommend-feature,
@@ -478,7 +522,7 @@ footer {
     #editorschoice-feature p {
       width: 50%;
       margin: 0 auto;
-      font-size: .7em; }
+      font-size: .6em; }
 
   #editorschoice-feature {
     width: 70%;
@@ -533,7 +577,7 @@ footer {
     font-size: 1em;
     display: inline-block; }
     footer li:first-child {
-      font-size: 1.4em; }
+      font-size: 1.2em; }
 
   .feedback-link {
     float: right;
@@ -621,9 +665,9 @@ footer {
   #intro .couch-icon {
     font-size: 5em; }
   #intro h1 {
-    font-size: 9em; }
+    font-size: 8em; }
   #intro h2 {
-    font-size: 3em; }
+    font-size: 2.6em; }
 
   #product-heros {
     height: 960px; }
@@ -648,3 +692,42 @@ footer {
   #editorschoice-feature {
     margin-top: -330px;
     font-size: 5em; } }
+@keyframes pulse {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes pulse {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-moz-keyframes pulse {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+
+@-ms-keyframes pulse {
+  0% {
+    opacity: 1; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
