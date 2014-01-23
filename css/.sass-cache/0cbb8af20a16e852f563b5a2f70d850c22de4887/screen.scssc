@@ -1,5 +1,5 @@
 3.2.10 (Media Mark)
-2f04f0999ba68d2bfd9ded2e2dcb1db2c8410cf4
+f70415c907e068e89825bfc6e4b25f2392801705
 o:Sass::Tree::RootNode
 :@template"Ú3@import "reset";
 @import "mixins";
@@ -263,7 +263,7 @@ body.touch {
   p {
     width: 90%;
     margin: .1em auto;
-    font-size: .6em;
+    font-size: .5em;
     line-height: 1.4;
   }
 }
@@ -1705,7 +1705,7 @@ width;[ ;o;; ;!;"90%;
 @
 ;
 @
-;i;";#o;;i ;["font-size;[ ;o;; ;!;"	.6em;
+;i;";#o;;i ;["font-size;[ ;o;; ;!;"	.5em;
 @
 ;
 @
