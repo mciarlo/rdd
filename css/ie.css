@@ -2,3 +2,15 @@
   background: transparent url(../images/appstorebadge.png) center center no-repeat;
   background-size: 100% auto;
 }
+
+#featured-banner-content {
+  width: 256px;
+  background: transparent url(../images/badge_red.png) center center no-repeat;
+  background-size: 100% auto;
+}
+
+@media screen and (min-width: 748px) {
+  #product-heros .app-store-info.touch {
+    width: 550px;
+  }
+}
