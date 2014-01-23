@@ -298,6 +298,10 @@ body.touch #hero2 {
   width: 90%;
   top: 50%;
   opacity: 0;
+  filter: alpha(opacity=0%);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 0%);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity =  0%);
+  display: none;
   left: 50%;
   margin-left: -45%;
   margin-top: -175px;
@@ -312,7 +316,10 @@ body.touch #hero2 {
   #recommend-feature.visible,
   #save-feature.visible,
   #editorschoice-feature.visible {
-    opacity: 1; }
+    opacity: 1;
+    filter: alpha(opacity=100%);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity =  100%); }
   #follow-feature.fixed,
   #recommend-feature.fixed,
   #save-feature.fixed,

@@ -294,7 +294,8 @@ body.touch {
   z-index: 1;
   width: 90%;
   top: 50%;
-  opacity: 0;
+  @include opacity(0.0, 0%);
+  display: none;
   left: 50%;
   margin-left: -45%;
   margin-top: -175px;
@@ -304,7 +305,7 @@ body.touch {
   @include transition(opacity, 400ms, ease-in-out);
 
   &.visible {
-    opacity: 1;
+    @include opacity(1.0, 100%);
   }
 
   &.fixed {
