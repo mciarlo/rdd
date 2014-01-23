@@ -1,80 +1,30 @@
-.arrow-icon {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
-}
-
 .download-link {
   background: transparent url(../images/appstorebadge.png) center center no-repeat;
   background-size: 100% auto;
 }
 
 #featured-banner-content {
-  display: none !important;
-}
-
-#editorschoice-feature {
-  margin-left: -155px;
-  width: 310px;
-  background: transparent url(../images/badge_ie_small.png) center center no-repeat;
-}
-
-body.touch #featured-banner-content {
-  display: block !important;
+  display: block;
   width: 311px;
   background: transparent url(../images/badge_red_ie_small.png) center center no-repeat;
 }
 
 @media screen and (min-width: 748px) {
-  #product-heros .app-store-info.touch {
-    width: 550px;
+  #product-heros .app-store-info {
+    width: 450px;
   }
 
-  #editorschoice-feature {
-    margin-left: -234px;
-    width: 468px;
-    background: transparent url(../images/badge_ie_medium.png) center center no-repeat;
-  }
-
-  body.touch #featured-banner-content {
+  #featured-banner-content {
     display: block;
     width: 376px;
     background: transparent url(../images/badge_red_ie_medium.png) center center no-repeat;
   }
-
-  body.touch .app-store-info.touch {
-    /* I'm sorry for this - REGRET NOTHING */
-    width: 450px !important;
-  }
 }
 
 @media screen and (min-width: 1002px) {
-  #editorschoice-feature {
-    margin-left: -436px;
-    width: 872px;
-    background: transparent url(../images/badge_ie_large.png) center center no-repeat;
-  }
-
   #featured-banner-content {
     display: block;
     width: 514px;
     background: transparent url(../images/badge_red_ie_large.png) center center no-repeat;
   }
-
-  .app-store-info.first {
-    /* I'm sorry for this - REGRET NOTHING */
-    width: 450px !important;
-  }
-}
-
-#follow-feature.visible,
-#recommend-feature.visible,
-#save-feature.visible,
-#editorschoice-feature.visible {
-  display: block;
-}
-
-#follow-feature,
-#recommend-feature,
-#save-feature,
-#editorschoice-feature {
-  display: none;
 }

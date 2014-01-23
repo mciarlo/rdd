@@ -33,423 +33,61 @@ h1, h2, h3 {
   }
 }
 
-/* Touch Styles -----------------------*/
-body.touch {
-  #intro,
-  #follow-feature,
-  #recommend-feature,
-  #save-feature,
-  #editorschoice-feature {
-    display: none;
-  }
-
-  #product-heros {
-    border-top: 5px solid #a6001b;
-    h1 {
-      padding-bottom: .1em;
-    }
-  }
-
-  #feature-rundown {
-    display: block;
-    width: 90%;
-    margin: 0 auto 0;
-    text-align: center;
-
-    li {
-      display: block;
-      width: 90%;
-      margin: 0 auto;
-      padding: 1.3em 0;
-      text-align: center;
-    }
-
-    span {
-      @include readabilicons;
-      color: #a6001b;
-      font-size: 4em;
-    }
-
-    p {
-      margin-top: .9em;
-      line-height: 1.4;
-      font-size: 1.2em;
-      color: #555;
-    }
-  }
-
-  #screenshot-wrapper {
-    height: 594px;
-  }
-
-  #featured-banner-content {
-    width: 256px;
-    background: transparent url(../images/badge_red.svg) center center no-repeat;
-    background-size: 100% auto;
-    padding: 5em 0;
-    margin: 3em auto 0;
-    text-align: center;
-    color: #333;
-
-    h3 {
-      font-size: 1.5em;
-    }
-
-    p {
-      display: block;
-      color: #999;
-      margin-top: .5em;
-      font-size: .9em;
-      font-family: Georgia;
-      font-weight: 100;
-      text-transform: uppercase;
-    }
-  }
-
-  .app-store-info.first {
-    display: none;
-  }
-
-  .app-store-info.touch {
-    display: block;
-    @include overflowfix;
-    height: 40px;
-  }
-}
-
-#feature-rundown,
-#featured-banner,
-.app-store-info.touch {
-  display: none;
-}
-
-.couch-icon {
+#feature-rundown {
   display: block;
-  @include readabilicons;
-  -webkit-font-smoothing:antialiased;
-
-  &:before {
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
-}
-
-.arrow-icon {
-  display: block;
-  margin: 2.5em auto 0;
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid #fdfdfd;
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid #fdfdfd;
-  border-left: 2px solid transparent;
-  @include rotate(45deg);
-  @include animation(pulse, 2s, infinite, ease-in-out, 0);
-}
-
-#intro {
-  z-index: 9;
-  width: 100%;
-  padding: 8em 0 6em;
-
-  .couch-icon {
-    font-size: 2.4em;
-    margin: 0em auto -.1em;
-    color: white;
-  }
-
-  overflow: hidden;
-  text-align: center;
-
-  h1 {
-    font-size: 3em;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-  }
-
-  h2 {
-    line-height: 1.3;
-    font-size: 1.4em;
-    width: 90%;
-    color: #fdfdfd;
-    margin: 0 auto;
-  }
-
-  .app-store-info {
-    margin: 6em auto 0;
-    width: 320px;
-    @include overflowfix;
-
-    a {
-      float: left;
-      width: 135px;
-      height: 40px;
-    }
-
-    p {
-      float: left;
-      display: block;
-      color: #fdfdfd;
-      border: none;
-      font-size: .9em;
-      line-height: 1.4;
-      margin: 0 1em 0 10px;
-      padding: .1em 1em .1em 20px;
-      border-right: 1px solid #db1f3e;
-      text-align: right;
-
-      span {
-        display: block;
-      }
-    }
-  }
-
-  .device-image {
-    margin-top: 3em;
-    width: 900px;
-    height: auto;
-    position: relative;
-  }
-}
-
-#scroll-instructions {
-  float: left;
-  width: 100%;
-  display: block;
-  text-align: center;
-  font-size: 1.2em;
-  color: #e94c53;
-  margin: .6em auto;
-  border: none;
-  @include sentinel-font;
-}
-
-#download-link {
-  width: 140px;
-  display: block;
-  margin: 0 auto;
-
-  img {
-    width: 100%;
-  }
-}
-
-.article-list {
-  position: relative;
-  font-size: .4em;
-  display: none;
-
-  li {
-    width: 20px;
-    height: 30px;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: -50px;
-    margin-left: -10px;
-    color: #ff565a;
-    z-index: 999;
-    font-size: 2.2em;
-    @include readabilicons;
-  }
-}
-
-#article-icons {
-  display: block;
-  font-size: 1em;
-
-  li {
-    position: fixed;
-
-    &.hidden {
-      opacity: 0;
-    }
-  }
-}
-
-#container {
-  position: relative;
-}
-
-#follow-feature,
-#recommend-feature,
-#save-feature,
-#editorschoice-feature {
-  position: fixed;
-  z-index: 1;
   width: 90%;
-  top: 50%;
-  @include opacity(0.0, 0%);
-  left: 50%;
-  margin-left: -45%;
-  margin-top: -175px;
-  display: block;
+  margin: 0 auto 0;
   text-align: center;
-  font-size: 2.6em;
-  @include transition(opacity, 400ms, ease-in-out);
 
-  &.visible {
-    @include opacity(1.0, 100%);
+  li {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.3em 0;
+    text-align: center;
   }
 
-  &.fixed {
-    position: absolute;
+  span {
+    @include readabilicons;
+    color: #a6001b;
+    font-size: 4em;
   }
 
   p {
-    width: 90%;
-    margin: .1em auto;
-    font-size: .5em;
+    margin-top: .9em;
     line-height: 1.4;
+    font-size: 1.2em;
+    color: #555;
   }
 }
 
-#editorschoice-feature {
-  margin-left: -45%;
-  font-size: 2em;
-  margin-top: -140px;
-  background: transparent url(../images/badge.svg) center center no-repeat;
+#featured-banner-content {
+  width: 256px;
+  background: transparent url(../images/badge_red.svg) center center no-repeat;
   background-size: 100% auto;
-  padding: 3em 0;
+  padding: 5em 0;
+  margin: 3em auto 0;
+  text-align: center;
+  color: #333;
+
+  h3 {
+    font-size: 1.6em;
+  }
 
   p {
-    color: #e94c53;
+    display: block;
+    color: #bd7e1a;
+    margin-top: .5em;
+    font-size: .8em;
     font-family: Georgia;
     font-weight: 100;
     text-transform: uppercase;
   }
 }
 
-.section-icon {
-  margin: 0 auto .2em;
-  font-size: 3.4em;
-  display: block;
-  @include readabilicons;
-}
-
-#follow-feature {
-  .section-icon {
-    margin-left: .1em;
-  }
-}
-
-#recommend-feature {
-  .section-icon {
-    margin-left: -.7em;
-  }
-}
-
-.app-store-info {
-  width: 300px;
-  margin: 3em auto;
-
-  a {
-    display: inline-block;
-
-    &:hover {
-      color: #d47979;
-    }
-  }
-
-  p {
-    float: left;
-    padding: .4em 0 .4em .7em;
-    border-left :1px solid #e1e1e1;
-    color: #999;
-    font-size: .96em;
-    margin-left: .7em;
-  }
-}
-
-#follow-article-icons {
-  li {
-    &.article-1 {
-      margin-left: -130px;
-      margin-top: 100px;
-    }
-
-    &.article-2 {
-      margin-left: -110px;
-      margin-top: 10px;
-    }
-
-    &.article-3 {
-      margin-left: -30px;
-      margin-top: 30px;
-    }
-
-    &.article-4 {
-      margin-left: 55px;
-      margin-top: 20px;
-    }
-
-    &.article-5 {
-      margin-left: 90px;
-      margin-top: 120px;
-    }
-  }
-}
-
-#recommend-article-icons {
-  li {
-    &.article-1 {
-      margin-left: 30px;
-      margin-top: 115px;
-    }
-
-    &.article-2 {
-      margin-left: 70px;
-      margin-top: -20px;
-    }
-
-    &.article-3 {
-      margin-left: 10px;
-      margin-top: 40px;
-    }
-
-    &.article-4 {
-      margin-left: 80px;
-      margin-top: 70px;
-    }
-
-    &.article-5 {
-      margin-left: 100px;
-      margin-top: 130px;
-    }
-  }
-}
-
-#save-article-icons {
-  li {
-    &.article-1 {
-      margin-left: -145px;
-      margin-top: 100px;
-    }
-
-    &.article-2 {
-      margin-left: -105px;
-      margin-top: 10px;
-    }
-
-    &.article-3 {
-      margin-left: -15px;
-      margin-top: -10px;
-    }
-
-    &.article-4 {
-      margin-left: 75px;
-      margin-top: 10px;
-    }
-
-    &.article-5 {
-      margin-left: 110px;
-      margin-top: 100px;
-    }
-  }
-}
-
 #product-heros {
   float: left;
+  border-top: 5px solid #a6001b;
   width: 100%;
   background: #fdfdfd;
   position: relative;
@@ -460,10 +98,28 @@ body.touch {
   .app-store-info {
     width: 135px;
     margin: 3em auto 4em;
+    display: block;
+    @include overflowfix;
+    height: 40px;
+
+    a {
+      display: inline-block;
+
+      &:hover {
+        color: #d47979;
+      }
+    }
 
     p {
+      float: left;
+      padding: .4em 0 .4em .7em;
+      border-left :1px solid #e1e1e1;
+      color: #999;
+      font-size: .96em;
+      margin-left: .7em;
       display: none;
     }
+
     span {
       color: #333;
       display: block;
@@ -498,7 +154,7 @@ body.touch {
 }
 
 #screenshot-wrapper {
-  height: 400px;
+  height: 594px;
   position: relative;
   overflow: hidden;
   margin: 1em 0 0;
@@ -556,32 +212,38 @@ footer {
       @include readabilicons;
     }
   }
-}
 
-.feedback-link {
-  margin-right: 0.3em;
+  .feedback-link {
+    margin-right: 0.3em;
+  }
 }
 
 @media screen and (min-width: 520px) {
-  body.touch {
-    #feature-rundown {
-      p {
-        font-size: 1.4em;
-      }
-      li {
-        width: 70%;
-        padding: 1.5em 0;
-      }
+  #feature-rundown {
+    p {
+      font-size: 1.4em;
+    }
+    li {
+      width: 70%;
+      padding: 1.5em 0;
+    }
+  }
+
+  #featured-banner-content {
+    width: 440px;
+    font-size: 1.3em;
+
+    h3 {
+      font-size: 2em;
     }
 
-    #featured-banner-content {
-      width: 440px;
-      font-size: 1.3em;
+    p {
+      font-size: 1.2em;
     }
+  }
 
-    #screenshot-wrapper {
-      height: 846px;
-    }
+  #screenshot-wrapper {
+    height: 846px;
   }
 
   #product-heros {
@@ -591,41 +253,11 @@ footer {
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 2.6em;
     }
 
     h2 {
       font-size: 1.7em;
-    }
-  }
-
-  #screenshot-wrapper {
-    height: 600px;
-    margin-top: 1.5em;
-  }
-
-  #follow-feature,
-  #recommend-feature,
-  #save-feature,
-  #editorschoice-feature {
-    p {
-      width: 60%;
-    }
-  }
-
-  #editorschoice-feature {
-    width: 60%;
-    margin-left: -30%;
-  }
-
-  #product-heros {
-    h1 {
-      font-size: 3em;
-    }
-
-    p {
-      font-size: 1.4em;
-      display: inline-block;
     }
   }
 
@@ -636,124 +268,9 @@ footer {
 }
 
 @media screen and (min-width: 748px) {
-  #intro {
-    padding: 11em 0 9em;
-
-    .couch-icon {
-      font-size: 4em;
-      margin: 0em auto -.1em;
-    }
-
-    h1 {
-      font-size: 6em;
-    }
-
-    h2 {
-      font-size: 2em;
-      width: 60%;
-      margin: 0 auto;
-    }
-
-    .app-store-info {
-      margin: 8em auto 0;
-      width: 362px;
-
-      p {
-        font-size: 1em;
-        margin-left: 20px;
-      }
-    }
-
-    .device-image {
-      margin-top: 3em;
-      width: 900px;
-    }
-  }
-
-  #download-link {
-    width: 140px;
-  }
-
-  .article-list {
-    font-size: .6em;
-    display: none;
-
-    li {
-      width: 30px;
-      height: 50px;
-      top: -50px;
-      margin-left: -15px;
-      font-size: 2.4em;
-    }
-  }
-
-  #follow-feature,
-  #recommend-feature,
-  #save-feature,
-  #editorschoice-feature {
-    width: 90%;
-    margin-left: -45%;
-    margin-top: -205px;
-    font-size: 2.6em;
-
-    p {
-      width: 50%;
-      margin: 0 auto;
-      font-size: .6em;
-    }
-  }
-
-  #editorschoice-feature {
-    width: 70%;
-    margin-left: -35%;
-    font-size: 3em;
-    margin-top: -220px;
-    padding: 3em 0;
-  }
-
-  .section-icon {
-    margin: 0 auto .2em;
-    font-size: 6em;
-  }
-
-  #follow-feature {
-    .section-icon {
-      margin-left: .1em;
-    }
-  }
-
-  #recommend-feature {
-    .section-icon {
-      margin-left: -.8em;
-    }
-  }
-
   #screenshot-wrapper {
-    height: 425px;
-  }
-
-  #product-heros {
-    h1 {
-      padding-top: 1em;
-      font-size: 3.4em;
-    }
-
-    .app-store-info {
-      width: 425px;
-      margin: 3em auto 7em;
-
-      p {
-        padding: .4em 0 .4em .9em;
-        font-size: 1.4em;
-        margin-left: 1em;
-        color: #777;
-        display: inline-block;
-      }
-
-      span {
-        display: none;
-      }
-    }
+    height: 426px;
+    margin-top: 1.5em;
   }
 
   #hero1 {
@@ -796,228 +313,89 @@ footer {
     margin-right: 0.3em;
   }
 
-  body.touch {
-    #intro {
-      position: relative;
-      left: auto;
-      top: auto;
-      margin: 0;
+  #product-heros {
+    float: left;
+    background: #fdfdfd;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    h1 {
+      padding-top: 1em;
+      font-size: 3.4em;
     }
 
-    #follow-feature,
-    #recommend-feature,
-    #save-feature,
-    #editorschoice-feature {
+    .app-store-info {
+      width: 425px;
+      margin: 3em auto 5em;
+
       p {
-        width: 40%;
-      }
-    }
-
-    #screenshot-wrapper {
-      height: 426px;
-    }
-
-    #save-feature {
-      padding-bottom: 3em;
-      border-bottom: 1px solid #d22c2c;
-    }
-
-    #editorschoice-feature {
-      border-top: none;
-      margin: 0 auto;
-    }
-
-    .article-list {
-      display: block;
-    }
-
-    #product-heros {
-      float: left;
-      background: #fdfdfd;
-      position: relative;
-      z-index: 10;
-      overflow: hidden;
-
-      .app-store-info.touch {
-        width: 425px;
-        margin-top: 4em;
-
-        p {
-          color: #555;
-          display: inline-block;
-        }
-      }
-    }
-
-    #container {
-      float: left;
-      width: 100%;
-      background-color: #a6001b;
-    }
-
-    #follow-article-icons {
-      display: block;
-    }
-
-    #feature-rundown {
-      margin-top: -2em;
-
-      li {
+       padding: .4em 0 .4em .9em;
+        font-size: 1.4em;
+        margin-left: 1em;
+        color: #555;
         display: inline-block;
-        width: 27%;
-        margin: 0 3%;
-
-        p {
-          font-size: 1.3em;
-        }
-      }
-    }
-
-    #featured-banner-content {
-      width: 420px;
-      margin-top: .5em;
-      font-size: 1.5em;
-    }
-  }
-
-  #follow-article-icons {
-    li {
-      &.article-1 {
-        margin-left: -190px;
-        margin-top: 150px;
       }
 
-      &.article-2 {
-        margin-left: -150px;
-        margin-top: 10px;
-      }
-
-      &.article-3 {
-        margin-left: -30px;
-        margin-top: 20px;
-      }
-
-      &.article-4 {
-        margin-left: 90px;
-        margin-top: 0px;
-      }
-
-      &.article-5 {
-        margin-left: 130px;
-        margin-top: 160px;
+      span {
+        display: none;
       }
     }
   }
 
-  #recommend-article-icons {
+  #feature-rundown {
+    margin-top: -2em;
+
     li {
-      &.article-1 {
-        margin-left: 40px;
-        margin-top: 175px;
-      }
+      display: inline-block;
+      width: 27%;
+      margin: 0 3%;
 
-      &.article-2 {
-        margin-left: 130px;
-        margin-top: -20px;
-      }
-
-      &.article-3 {
-        margin-left: 30px;
-        margin-top: 40px;
-      }
-
-      &.article-4 {
-        margin-left: 98px;
-        margin-top: 96px;
-      }
-
-      &.article-5 {
-        margin-left: 160px;
-        margin-top: 190px;
+      p {
+        font-size: 1.3em;
       }
     }
   }
 
-  #save-article-icons {
-    li {
-      &.article-1 {
-        margin-left: -210px;
-        margin-top: 100px;
-      }
-
-      &.article-2 {
-        margin-left: -150px;
-        margin-top: 10px;
-      }
-
-      &.article-3 {
-        margin-left: -30px;
-        margin-top: -30px;
-      }
-
-      &.article-4 {
-        margin-left: 90px;
-        margin-top: 10px;
-      }
-
-      &.article-5 {
-        margin-left: 160px;
-        margin-top: 100px;
-      }
-    }
+  #featured-banner-content {
+    width: 420px;
+    margin-top: .5em;
+    font-size: 1.3em;
   }
 }
 
 @media screen and (min-width: 1002px) {
-  body.touch {
-    #product-heros {
-      .app-store-info.touch {
-        margin-top: 5em;
-      }
-    }
-
-    #screenshot-wrapper {
-      height: 564px;
-    }
-
-    #feature-rundown {
-      li {
-        font-size: 1em;
-        display: inline-block;
-        width: 27%;
-        margin: 0 2%;
-      }
-    }
-
-    #featured-banner-content {
-      width: 440px;
-      font-size: 1.6em;
-    }
-
-  }
-
-  #intro {
-    .couch-icon {
-      font-size: 5em;
+  #product-heros {
+    .app-store-info.touch {
+      margin-top: 5em;
     }
 
     h1 {
-      font-size: 8em;
+      font-size: 4em;
     }
 
     h2 {
-      font-size: 2.6em;
-    }
-  }
-
-  #product-heros {
-    h1 {
-      font-size: 4em;
+      font-size: 2em;
     }
   }
 
   #screenshot-wrapper {
     height: 565px;
+  }
+
+  #feature-rundown {
+    li {
+      font-size: 1em;
+      display: inline-block;
+      width: 27%;
+      max-width: 280px;
+      margin: 0 2%;
+    }
+  }
+
+  #featured-banner-content {
+    width: 440px;
+    font-size: 1.4em;
   }
 
   #hero1 {
@@ -1030,73 +408,5 @@ footer {
     margin-left: -470px;
     top: 0;
     width: 820px;
-  }
-
-  #editorschoice-feature {
-    margin-top: -300px;
-    font-size: 4.3em;
-  }
-}
-
-@media screen and (min-width: 1202px) {
-  #editorschoice-feature {
-    margin-top: -330px;
-    font-size: 5em;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes pulse {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
