@@ -658,7 +658,7 @@ footer {
     body.touch #product-heros h2 {
       font-size: 2.4em; }
     body.touch #product-heros .app-store-info.touch {
-      width: 420px;
+      width: 425px;
       margin-top: 4em; }
       body.touch #product-heros .app-store-info.touch p {
         color: #555;
@@ -733,7 +733,7 @@ footer {
   body.touch #feature-rundown li {
     font-size: 1.1em;
     display: inline-block;
-    width: 26%;
+    width: 27%;
     margin: 0 3%; }
   body.touch #featured-banner-content {
     margin-top: 620px;

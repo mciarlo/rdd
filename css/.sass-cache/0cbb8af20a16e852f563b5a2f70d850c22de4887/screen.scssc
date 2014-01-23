@@ -1,5 +1,5 @@
 3.2.10 (Media Mark)
-0738dc61776d754e586071f753e9741bdabc01dd
+0d228aa9853beed45a5116eea88c40beba5ad8fe
 o:Sass::Tree::RootNode
 :@template"¾;@import "reset";
 @import "mixins";
@@ -812,7 +812,7 @@ footer {
       }
 
       .app-store-info.touch {
-        width: 420px;
+        width: 425px;
         margin-top: 4em;
 
         p {
@@ -949,7 +949,7 @@ footer {
       li {
         font-size: 1.1em;
         display: inline-block;
-        width: 26%;
+        width: 27%;
         margin: 0 3%;
       }
     }
@@ -3317,7 +3317,7 @@ float;[ ;o;; ;!;"	left;
 ;(["h2;i';)o;*;+" ;i';,[o;-;,[o;.
 ;/0;+@ê;0o;1;2{ ;i';,[o;3	;["h2;+@ê;i';40;5To;;i ;[o;;i ;["
 width;[ ;o;; ;!;"
-420px;
+425px;
 @
 ;
 @
@@ -3644,7 +3644,7 @@ touch;+@;i¬;5T;
 ;
 @
 ;i´;";#o;;i ;["
-width;[ ;o;; ;!;"26%;
+width;[ ;o;; ;!;"27%;
 @
 ;
 @
