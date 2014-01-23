@@ -301,7 +301,6 @@ body.touch #hero2 {
   filter: alpha(opacity=0%);
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity = 0%);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity =  0%);
-  display: none;
   left: 50%;
   margin-left: -45%;
   margin-top: -175px;
