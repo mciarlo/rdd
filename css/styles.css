@@ -99,7 +99,63 @@ body.touch #save-feature,
 body.touch #editorschoice-feature {
   display: none; }
 body.touch #product-heros {
+  height: 1720px;
   border-top: 5px solid #a6001b; }
+  body.touch #product-heros h2 {
+    display: block;
+    color: #555;
+    font-size: 1.2em;
+    text-align: center; }
+body.touch #feature-rundown {
+  display: block;
+  width: 90%;
+  margin: 0 auto 0;
+  text-align: center; }
+  body.touch #feature-rundown li {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1em 0;
+    text-align: center; }
+  body.touch #feature-rundown span {
+    font-family: 'readabiliconsregular';
+    color: #a6001b;
+    font-size: 4em; }
+  body.touch #feature-rundown p {
+    margin-top: .9em;
+    line-height: 1.4;
+    font-size: 1.2em;
+    color: #555; }
+body.touch #featured-banner-content {
+  width: 256px;
+  background: transparent url(../images/badge_red.svg) center center no-repeat;
+  background-size: 100% auto;
+  padding: 5em 0;
+  margin: 700px auto 0;
+  text-align: center;
+  color: #333; }
+  body.touch #featured-banner-content h3 {
+    font-size: 1.5em; }
+  body.touch #featured-banner-content p {
+    display: block;
+    color: #999;
+    margin-top: .5em;
+    font-size: .9em;
+    font-family: Georgia;
+    font-weight: 100;
+    text-transform: uppercase; }
+body.touch .app-store-info.first {
+  display: none; }
+body.touch .app-store-info.touch {
+  display: block;
+  margin-top: 2em; }
+  body.touch .app-store-info.touch p {
+    display: none; }
+
+#feature-rundown,
+#featured-banner,
+.app-store-info.touch {
+  display: none; }
 
 .couch-icon {
   display: block;
@@ -375,7 +431,7 @@ body.touch #product-heros {
     #product-heros h1 span {
       font-weight: bold;
       color: #a6001b; }
-  #product-heros p {
+  #product-heros h2 {
     display: none; }
 
 #hero1 {
@@ -426,6 +482,22 @@ footer {
   margin-right: 0.3em; }
 
 @media screen and (min-width: 520px) {
+  body.touch #product-heros {
+    height: 1800px; }
+    body.touch #product-heros .app-store-info.touch {
+      width: 135px;
+      height: 40px;
+      margin: 3em auto; }
+      body.touch #product-heros .app-store-info.touch p {
+        display: none; }
+    body.touch #product-heros h2 {
+      font-size: 1.7em; }
+  body.touch #feature-rundown li {
+    width: 60%; }
+  body.touch #featured-banner-content {
+    width: 440px;
+    font-size: 1.3em; }
+
   #follow-feature p,
   #recommend-feature p,
   #save-feature p,
@@ -581,13 +653,30 @@ footer {
     background: #fdfdfd;
     position: relative;
     z-index: 10;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 1400px; }
+    body.touch #product-heros h2 {
+      font-size: 2.4em; }
+    body.touch #product-heros .app-store-info.touch {
+      width: 420px;
+      margin-top: 4em; }
+      body.touch #product-heros .app-store-info.touch p {
+        color: #555;
+        display: inline-block; }
   body.touch #container {
     float: left;
     width: 100%;
     background-color: #a6001b; }
   body.touch #follow-article-icons {
     display: block; }
+  body.touch #feature-rundown li {
+    display: inline-block;
+    width: 26%;
+    margin: 0 3%; }
+  body.touch #featured-banner-content {
+    margin-top: 500px;
+    width: 440px;
+    font-size: 1.4em; }
 
   #follow-article-icons li.article-1 {
     margin-left: -190px;
@@ -637,6 +726,20 @@ footer {
     margin-left: 160px;
     margin-top: 100px; } }
 @media screen and (min-width: 1002px) {
+  body.touch #product-heros {
+    height: 1600px; }
+    body.touch #product-heros .app-store-info.touch {
+      margin-top: 6em; }
+  body.touch #feature-rundown li {
+    font-size: 1.1em;
+    display: inline-block;
+    width: 26%;
+    margin: 0 3%; }
+  body.touch #featured-banner-content {
+    margin-top: 620px;
+    width: 440px;
+    font-size: 1.6em; }
+
   #intro .couch-icon {
     font-size: 5em; }
   #intro h1 {

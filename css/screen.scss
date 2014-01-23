@@ -42,9 +42,89 @@ body.touch {
   #editorschoice-feature {
     display: none;
   }
+
   #product-heros {
+    height: 1720px;
     border-top: 5px solid #a6001b;
+
+    h2 {
+      display: block;
+      color: #555;
+      font-size: 1.2em;
+      text-align: center;
+    }
   }
+
+  #feature-rundown {
+    display: block;
+    width: 90%;
+    margin: 0 auto 0;
+    text-align: center;
+
+    li {
+      display: block;
+      width: 90%;
+      margin: 0 auto;
+      padding: 1em 0;
+      text-align: center;
+    }
+
+    span {
+      @include readabilicons;
+      color: #a6001b;
+      font-size: 4em;
+    }
+
+    p {
+      margin-top: .9em;
+      line-height: 1.4;
+      font-size: 1.2em;
+      color: #555;
+    }
+  }
+
+  #featured-banner-content {
+    width: 256px;
+    background: transparent url(../images/badge_red.svg) center center no-repeat;
+    background-size: 100% auto;
+    padding: 5em 0;
+    margin: 700px auto 0;
+    text-align: center;
+    color: #333;
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    p {
+      display: block;
+      color: #999;
+      margin-top: .5em;
+      font-size: .9em;
+      font-family: Georgia;
+      font-weight: 100;
+      text-transform: uppercase;
+    }
+  }
+
+  .app-store-info.first {
+    display: none;
+  }
+
+  .app-store-info.touch {
+    display: block;
+    margin-top: 2em;
+
+    p {
+      display: none;
+    }
+  }
+}
+
+#feature-rundown,
+#featured-banner,
+.app-store-info.touch {
+  display: none;
 }
 
 .couch-icon {
@@ -403,7 +483,7 @@ body.touch {
     }
   }
 
-  p {
+  h2 {
     display: none;
   }
 }
@@ -466,6 +546,37 @@ footer {
 }
 
 @media screen and (min-width: 520px) {
+  body.touch {
+    #product-heros {
+      height: 1800px;
+
+      .app-store-info.touch {
+        width: 135px;
+        height: 40px;
+        margin: 3em auto;
+
+        p {
+          display: none;
+        }
+      }
+
+      h2 {
+        font-size: 1.7em;
+      }
+    }
+
+    #feature-rundown {
+      li {
+        width: 60%;
+      }
+    }
+
+    #featured-banner-content {
+      width: 440px;
+      font-size: 1.3em;
+    }
+  }
+
   #follow-feature,
   #recommend-feature,
   #save-feature,
@@ -691,6 +802,21 @@ footer {
       position: relative;
       z-index: 10;
       overflow: hidden;
+      height: 1400px;
+
+      h2 {
+        font-size: 2.4em;
+      }
+
+      .app-store-info.touch {
+        width: 420px;
+        margin-top: 4em;
+
+        p {
+          color: #555;
+          display: inline-block;
+        }
+      }
     }
 
     #container {
@@ -701,6 +827,20 @@ footer {
 
     #follow-article-icons {
       display: block;
+    }
+
+    #feature-rundown {
+      li {
+        display: inline-block;
+        width: 26%;
+        margin: 0 3%;
+      }
+    }
+
+    #featured-banner-content {
+      margin-top: 500px;
+      width: 440px;
+      font-size: 1.4em;
     }
   }
 
@@ -793,6 +933,31 @@ footer {
 }
 
 @media screen and (min-width: 1002px) {
+  body.touch {
+    #product-heros {
+      height: 1600px;
+
+      .app-store-info.touch {
+        margin-top: 6em;
+      }
+    }
+
+    #feature-rundown {
+      li {
+        font-size: 1.1em;
+        display: inline-block;
+        width: 26%;
+        margin: 0 3%;
+      }
+    }
+
+    #featured-banner-content {
+      margin-top: 620px;
+      width: 440px;
+      font-size: 1.6em;
+    }
+  }
+
   #intro {
     .couch-icon {
       font-size: 5em;
