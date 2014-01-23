@@ -8,7 +8,8 @@
 }
 
 #featured-banner-content {
-  display: none;
+  /* I'm sorry for this - REGRET NOTHING */
+  display: none !important;
 }
 
 #editorschoice-feature {
@@ -55,6 +56,11 @@ body.touch #featured-banner-content {
   }
 
   body.touch .app-store-info.touch {
+    /* I'm sorry for this - REGRET NOTHING */
+    width: 450px !important;
+  }
+
+  .app-store-info.first {
     /* I'm sorry for this - REGRET NOTHING */
     width: 450px !important;
   }
