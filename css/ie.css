@@ -55,7 +55,8 @@ body.touch #featured-banner-content {
   }
 
   body.touch .app-store-info.touch {
-    width: 450px;
+    /* I'm sorry for this - REGRET NOTHING */
+    width: 450px !important;
   }
 }
 
