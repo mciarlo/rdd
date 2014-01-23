@@ -15,7 +15,7 @@
   background: transparent url(../images/badge_ie_small.png) center center no-repeat;
 }
 
-#featured-banner-content {
+body.touch #featured-banner-content {
   width: 311px;
   background: transparent url(../images/badge_red_ie_small.png) center center no-repeat;
 }
@@ -31,7 +31,7 @@
     background: transparent url(../images/badge_ie_medium.png) center center no-repeat;
   }
 
-  #featured-banner-content {
+  body.touch #featured-banner-content {
     width: 376px;
     background: transparent url(../images/badge_red_ie_medium.png) center center no-repeat;
   }
