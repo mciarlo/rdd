@@ -35,52 +35,15 @@ h1, h2, h3 {
 
 /* Touch Styles -----------------------*/
 body.touch {
-  #intro {
-    position: relative;
-    left: auto;
-    top: auto;
-    margin: 0;
-
-    .app-store-info {
-      margin-top: 3em;
-    }
-  }
-
-
+  #intro,
   #follow-feature,
   #recommend-feature,
   #save-feature,
   #editorschoice-feature {
-    border-top: 1px solid #d22c2c;
-    position: relative;
-    z-index: 1;
-    opacity: 1;
-    margin: 0 auto;
-    left: auto;
-    top: auto;
-    margin-top: 0;
-    display: block;
-    text-align: center;
-    padding: 4em 0 3.5em;
+    display: none;
   }
-
-  #save-feature {
-    padding-bottom: 5em;
-  }
-
-  #editorschoice-feature {
-    margin: 0 auto;
-    padding: 6em 0;
-  }
-
-  .article-list {
-    display: block;
-  }
-
-  #container {
-    float: left;
-    width: 100%;
-    background-color: #a6001b;
+  #product-heros {
+    border-top: 5px solid #a6001b;
   }
 }
 
@@ -848,20 +811,20 @@ footer {
     height: 960px;
 
     h1 {
-      padding: 1.2em 0 .1em;
+      padding: 1em 0 .1em;
       font-size: 6em;
     }
   }
 
   #hero1 {
     margin-left: 230px;
-    top: 357px;
+    top: 327px;
     width: 240px;
   }
 
   #hero2 {
     margin-left: -470px;
-    top: 304px;
+    top: 274px;
     width: 820px;
   }
 
