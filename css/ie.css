@@ -1,3 +1,8 @@
+.arrow-icon {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
+}
+
+
 .download-link {
   background: transparent url(../images/appstorebadge.png) center center no-repeat;
   background-size: 100% auto;
