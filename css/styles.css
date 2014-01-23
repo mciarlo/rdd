@@ -672,17 +672,17 @@ footer {
   #product-heros {
     height: 960px; }
     #product-heros h1 {
-      padding: 1.2em 0 .1em;
+      padding: 1em 0 .1em;
       font-size: 6em; }
 
   #hero1 {
     margin-left: 230px;
-    top: 357px;
+    top: 327px;
     width: 240px; }
 
   #hero2 {
     margin-left: -470px;
-    top: 304px;
+    top: 274px;
     width: 820px; }
 
   #editorschoice-feature {

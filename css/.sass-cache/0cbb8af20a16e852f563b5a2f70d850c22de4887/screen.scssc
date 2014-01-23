@@ -1,7 +1,7 @@
 3.2.10 (Media Mark)
-f70415c907e068e89825bfc6e4b25f2392801705
+ba0ac4c4d1c011b0269d087089e74608a9858de8
 o:Sass::Tree::RootNode
-:@template"Ú3@import "reset";
+:@template"Ø3@import "reset";
 @import "mixins";
 
 $linkblue: #5692bc;
@@ -851,20 +851,20 @@ footer {
     height: 960px;
 
     h1 {
-      padding: 1.2em 0 .1em;
+      padding: 1em 0 .1em;
       font-size: 6em;
     }
   }
 
   #hero1 {
     margin-left: 230px;
-    top: 357px;
+    top: 327px;
     width: 240px;
   }
 
   #hero2 {
     margin-left: -470px;
-    top: 304px;
+    top: 274px;
     width: 820px;
   }
 
@@ -3231,7 +3231,7 @@ intro;+@Æ;iA;5To;;i ;[o;;i ;["height;[ ;o;; ;!;"
 @
 ;
 @
-;iP;";#o;;i ;[o;;i ;["padding;[ ;o;; ;!;"1.2em 0 .1em;
+;iP;";#o;;i ;[o;;i ;["padding;[ ;o;; ;!;"1em 0 .1em;
 @
 ;
 @
@@ -3251,7 +3251,7 @@ intro;+@Æ;iA;5To;;i ;[o;;i ;["height;[ ;o;; ;!;"
 ;
 @
 ;iY;";#o;;i ;["top;[ ;o;; ;!;"
-357px;
+327px;
 @
 ;
 @
@@ -3270,7 +3270,7 @@ hero1;+@;iX;5To;;i ;[o;;i ;["margin-left;[ ;o;; ;!;"-470p
 ;
 @
 ;i_;";#o;;i ;["top;[ ;o;; ;!;"
-304px;
+274px;
 @
 ;
 @
