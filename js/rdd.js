@@ -235,5 +235,5 @@ $(function () {
     return;
   }
 
-  $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3) + $('#product-heros').outerHeight());
+  //$("#container").height(windowHeight * 6 + (NEXT_DELAY * 3) + $('#product-heros').outerHeight());
 });
