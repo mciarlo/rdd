@@ -690,10 +690,6 @@ footer {
     position: relative;
     z-index: 10;
     overflow: hidden; }
-    body.touch #product-heros h1 {
-      font-size: 4em; }
-    body.touch #product-heros h2 {
-      font-size: 2.4em; }
     body.touch #product-heros .app-store-info.touch {
       width: 425px;
       margin-top: 4em; }
