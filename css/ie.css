@@ -10,13 +10,25 @@
 }
 
 #editorschoice-feature {
+  width: 255px;
   background: transparent url(../images/badge.png) center center no-repeat;
-  background-size: 100% auto;
 }
 
 @media screen and (min-width: 748px) {
   #product-heros .app-store-info.touch {
     width: 550px;
+  }
+
+  #editorschoice-feature {
+    width: 468px;
+    background: transparent url(../images/badge_ie_medium.png) center center no-repeat;
+  }
+}
+
+@media screen and (min-width: 1002px) {
+  #editorschoice-feature {
+    width: 872px;
+    background: transparent url(../images/badge_ie_large.png) center center no-repeat;
   }
 }
 
