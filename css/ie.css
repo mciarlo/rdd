@@ -39,6 +39,11 @@ body.touch #featured-banner-content {
     width: 376px;
     background: transparent url(../images/badge_red_ie_medium.png) center center no-repeat;
   }
+
+  body.touch .app-store-info.touch {
+    /* I'm sorry for this - REGRET NOTHING */
+    width: 450px !important;
+  }
 }
 
 @media screen and (min-width: 1002px) {
@@ -52,11 +57,6 @@ body.touch #featured-banner-content {
     display: block;
     width: 514px;
     background: transparent url(../images/badge_red_ie_large.png) center center no-repeat;
-  }
-
-  body.touch .app-store-info.touch {
-    /* I'm sorry for this - REGRET NOTHING */
-    width: 450px !important;
   }
 
   .app-store-info.first {
