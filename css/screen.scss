@@ -48,30 +48,6 @@ a:hover {
   }
 }
 
-#featured-banner-content {
-  width: 256px;
-  background: transparent url(../images/badge_red.svg) center center no-repeat;
-  background-size: 100% auto;
-  padding: 5em 0;
-  margin: 3em auto 0;
-  text-align: center;
-  color: #333;
-
-  h3 {
-    font-size: 1.6em;
-  }
-
-  p {
-    display: block;
-    color: #bd7e1a;
-    margin-top: .5em;
-    font-size: .8em;
-    font-family: Georgia;
-    font-weight: 100;
-    text-transform: uppercase;
-  }
-}
-
 #product-heros {
   float: left;
   border-top: 5px solid #a6001b;
@@ -216,19 +192,6 @@ footer {
     }
   }
 
-  #featured-banner-content {
-    width: 440px;
-    font-size: 1.3em;
-
-    h3 {
-      font-size: 2em;
-    }
-
-    p {
-      font-size: 1.2em;
-    }
-  }
-
   #screenshot-wrapper {
     height: 846px;
   }
@@ -333,7 +296,7 @@ footer {
   }
 
   #feature-rundown {
-    margin-top: -2em;
+    margin-top: 1em;
 
     li {
       display: inline-block;
@@ -344,12 +307,6 @@ footer {
         font-size: 1.3em;
       }
     }
-  }
-
-  #featured-banner-content {
-    width: 420px;
-    margin-top: .5em;
-    font-size: 1.3em;
   }
 }
 
@@ -380,11 +337,6 @@ footer {
       max-width: 280px;
       margin: 0 2%;
     }
-  }
-
-  #featured-banner-content {
-    width: 440px;
-    font-size: 1.4em;
   }
 
   #hero1 {

@@ -3,27 +3,8 @@
   background-size: 100% auto;
 }
 
-#featured-banner-content {
-  width: 311px;
-  background: transparent url(../images/badge_red_ie_small.png) center center no-repeat;
-}
-
-@media screen and (min-width: 520px) {
-  #featured-banner-content {
-    width: 441px;
-    background: transparent url(../images/badge_red_ie_medium.png) center center no-repeat;
-  }
-}
-
 @media screen and (min-width: 748px) {
   #product-heros .app-store-info {
     width: 450px;
-  }
-}
-
-@media screen and (min-width: 1002px) {
-  #featured-banner-content {
-    width: 514px;
-    background: transparent url(../images/badge_red_ie_large.png) center center no-repeat;
   }
 }
