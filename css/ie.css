@@ -1,4 +1,5 @@
 .arrow-icon {
+  margin-left: -10px;
   -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865474, M12=-0.7071067811865477, M21=0.7071067811865477, M22=0.7071067811865474, SizingMethod='auto expand')";
 }
 
@@ -8,16 +9,15 @@
   background-size: 100% auto;
 }
 
-#featured-banner-content {
-  width: 256px;
-  background: transparent url(../images/badge_red.png) center center no-repeat;
-  background-size: 100% auto;
-}
-
 #editorschoice-feature {
   margin-left: -155px;
   width: 310px;
   background: transparent url(../images/badge_ie_small.png) center center no-repeat;
+}
+
+#featured-banner-content {
+  width: 311px;
+  background: transparent url(../images/badge_red_ie_small.png) center center no-repeat;
 }
 
 @media screen and (min-width: 748px) {
@@ -30,6 +30,11 @@
     width: 468px;
     background: transparent url(../images/badge_ie_medium.png) center center no-repeat;
   }
+
+  #featured-banner-content {
+    width: 376px;
+    background: transparent url(../images/badge_red_ie_medium.png) center center no-repeat;
+  }
 }
 
 @media screen and (min-width: 1002px) {
@@ -37,6 +42,15 @@
     margin-left: -436px;
     width: 872px;
     background: transparent url(../images/badge_ie_large.png) center center no-repeat;
+  }
+
+  #featured-banner-content {
+    width: 514px;
+    background: transparent url(../images/badge_red_ie_large.png) center center no-repeat;
+  }
+
+  body.touch .app-store-info.touch {
+    width: 450px;
   }
 }
 
