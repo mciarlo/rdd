@@ -102,7 +102,7 @@ body.touch #product-heros {
   height: 1780px;
   border-top: 5px solid #a6001b; }
   body.touch #product-heros h1 {
-    padding-bottom: .1em; }
+    padding-bottom: .2em; }
   body.touch #product-heros h2 {
     display: block;
     color: #555;
@@ -154,9 +154,9 @@ body.touch .app-store-info.touch {
   body.touch .app-store-info.touch p {
     display: none; }
 body.touch #hero1 {
-  top: 125px; }
+  top: 130px; }
 body.touch #hero2 {
-  top: 134px; }
+  top: 140px; }
 
 #feature-rundown,
 #featured-banner,

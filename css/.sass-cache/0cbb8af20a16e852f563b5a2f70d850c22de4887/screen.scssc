@@ -1,5 +1,5 @@
 3.2.10 (Media Mark)
-c6631989b7482a3f60c8dac76789ee20c8ada847
+c4052743119ec73a6857ba9bcd0b42835c949ca0
 o:Sass::Tree::RootNode
 :@template"ð=@import "reset";
 @import "mixins";
@@ -50,7 +50,7 @@ body.touch {
     height: 1780px;
     border-top: 5px solid #a6001b;
     h1 {
-      padding-bottom: .1em;
+      padding-bottom: .2em;
     }
 
     h2 {
@@ -127,11 +127,11 @@ body.touch {
   }
 
   #hero1 {
-    top: 125px;
+    top: 130px;
   }
 
   #hero2 {
-    top: 134px;
+    top: 140px;
   }
 }
 
@@ -1252,7 +1252,7 @@ o;.
 @
 ;
 @
-;i5;";#o;;i ;[o;;i ;["padding-bottom;[ ;o;; ;!;"	.1em;
+;i5;";#o;;i ;[o;;i ;["padding-bottom;[ ;o;; ;!;"	.2em;
 @
 ;
 @
@@ -1483,7 +1483,7 @@ block;
 ;([".app-store-info.touch;iz;)o;*;+" ;iz;,[o;-;,[o;.
 ;/0;+@û;0o;1;2{ ;iz;,[o;@;["app-store-info;+@û;izo;@;["
 touch;+@û;iz;5To;;i ;[o;;i ;["top;[ ;o;; ;!;"
-125px;
+130px;
 @
 ;
 @
@@ -1492,7 +1492,7 @@ touch;+@û;iz;5To;;i ;[o;;i ;["top;[ ;o;; ;!;"
 ;(["#hero1;i~;)o;*;+" ;i~;,[o;-;,[o;.
 ;/0;+@;0o;1;2{ ;i~;,[o;<;["
 hero1;+@;i~;5To;;i ;[o;;i ;["top;[ ;o;; ;!;"
-134px;
+140px;
 @
 ;
 @
