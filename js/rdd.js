@@ -228,12 +228,11 @@ $(function () {
   $window.scroll(_.throttle(onScroll, THROTTLE));
   $window.resize(_.throttle(onResize, THROTTLE));
 
-    // Modernizer?
   if (isMobile || isTablet) {
     $body.addClass('touch');
 
     return;
   }
 
-  //$("#container").height(windowHeight * 6 + (NEXT_DELAY * 3) + $('#product-heros').outerHeight());
+  $("#container").height(windowHeight * 6 + (NEXT_DELAY * 3) + $('#product-heros').outerHeight());
 });
