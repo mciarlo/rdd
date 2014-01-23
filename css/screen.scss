@@ -1,11 +1,6 @@
 @import "reset";
 @import "mixins";
 
-$linkblue: #5692bc;
-$column: 56px;
-$wide-width: 1002px;
-$narrow-width: 100%;
-
 html,
 body {
   color: #fdfdfd;
@@ -23,14 +18,6 @@ a:visited {
 
 a:hover {
   color: #555;
-}
-
-h1, h2, h3 {
-  -webkit-font-smoothing:antialiased;
-
-  &:before {
-    -webkit-font-smoothing: subpixel-antialiased;
-  }
 }
 
 #feature-rundown {

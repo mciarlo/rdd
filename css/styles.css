@@ -86,11 +86,6 @@ a:visited {
 a:hover {
   color: #555; }
 
-h1, h2, h3 {
-  -webkit-font-smoothing: antialiased; }
-  h1:before, h2:before, h3:before {
-    -webkit-font-smoothing: subpixel-antialiased; }
-
 #feature-rundown {
   display: block;
   width: 90%;
