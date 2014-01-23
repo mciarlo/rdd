@@ -9,6 +9,11 @@
   background-size: 100% auto;
 }
 
+#editorschoice-feature {
+  background: transparent url(../images/badge.png) center center no-repeat;
+  background-size: 100% auto;
+}
+
 @media screen and (min-width: 748px) {
   #product-heros .app-store-info.touch {
     width: 550px;
